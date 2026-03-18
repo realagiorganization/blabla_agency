@@ -24,7 +24,7 @@
 - [Specification](specification.md)
 - [Use cases](use-cases.md)
 - [Delivery model](delivery-model.md)
-- [Latest presentation PDF](https://Adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf)
+- <a href="artifacts/blabla_agency_presentation.pdf">Latest presentation PDF</a>
 
 ## Русский
 
@@ -50,4 +50,4 @@
 - [Спецификация](specification.md)
 - [Use case'ы](use-cases.md)
 - [Модель поставки](delivery-model.md)
-- [Актуальный PDF презентации](https://Adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf)
+- <a href="artifacts/blabla_agency_presentation.pdf">Актуальный PDF презентации</a>

@@ -1,11 +1,15 @@
 SHELL := /bin/bash
 
-.PHONY: deps venv lint pdf site artifacts verify ci monitor clean
+.PHONY: deps venv content-policy lint pdf site artifacts verify ci monitor clean
 
 deps: venv
 
 venv:
 	./scripts/setup_venv.sh
+
+content-policy:
+	./scripts/setup_venv.sh
+	./.venv/bin/python scripts/check_content_policy.py
 
 lint:
 	./scripts/lint_repo.sh

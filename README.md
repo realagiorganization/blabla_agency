@@ -1,8 +1,5 @@
 # blabla agency
 
-[![Build and deploy presentation](https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml/badge.svg)](https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml)
-[![Monitor live deployment](https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml/badge.svg)](https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml)
-
 ## English
 
 This repository is a bilingual LaTeX + Markdown publishing scaffold for **blabla agency**: an AI agency that turns Zoom talks, recorded video and audio conversations, chats, and dumped files into a continuously versioned website, an evolving specification, linked use cases, and a Beamer presentation.
@@ -11,10 +8,16 @@ The operating promise is straightforward: no matter how raw the source material 
 
 ### Live artifact links
 
-- Website: <https://Adminrealagi.github.io/blabla_agency/>
-- Latest presentation PDF: <https://Adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
-- Workflow runs and downloadable CI artifacts: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml>
-- Live verification monitor: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml>
+- Personal website: <https://adminrealagi.github.io/blabla_agency/>
+- Personal latest presentation PDF: <https://adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
+- Personal workflow runs and downloadable CI artifacts: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml>
+- Personal live verification monitor: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml>
+- Organization website: <https://realagiorganization.github.io/blabla_agency/>
+- Organization latest presentation PDF: <https://realagiorganization.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
+- Organization workflow runs and downloadable CI artifacts: <https://github.com/realagiorganization/blabla_agency/actions/workflows/presentation.yml>
+- Organization live verification monitor: <https://github.com/realagiorganization/blabla_agency/actions/workflows/verification-monitor.yml>
+- Generic GitHub Pages pattern for any mirror: `https://<owner>.github.io/blabla_agency/`
+- Generic PDF pattern for any mirror: `https://<owner>.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf`
 
 These links become live after the first successful GitHub Actions build and GitHub Pages deployment.
 
@@ -36,12 +39,13 @@ make site
 ### Local verification and monitoring
 
 ```bash
+make content-policy
 make lint
 make verify
 make monitor
 ```
 
-`make lint` checks Markdown formatting, YAML structure, and shell syntax. `make verify` rebuilds the PDF and site, verifies the generated outputs, and writes an artifact manifest. `make monitor` checks the latest workflow result plus the live site and PDF URLs.
+`make content-policy` checks bilingual section order and deployment-safe public links. `make lint` checks Markdown formatting, YAML structure, shell syntax, and the content policy. `make verify` rebuilds the PDF and site, verifies the generated outputs, and writes an artifact manifest. `make monitor` checks the latest workflow result plus the live site and PDF URLs.
 
 ### CI pipeline
 
@@ -56,10 +60,16 @@ make monitor
 
 ### Ссылки на артефакты
 
-- Сайт: <https://Adminrealagi.github.io/blabla_agency/>
-- Актуальный PDF презентации: <https://Adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
-- Запуски workflow и скачиваемые CI-артефакты: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml>
-- Workflow мониторинга живой публикации: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml>
+- Персональный сайт: <https://adminrealagi.github.io/blabla_agency/>
+- Персональный актуальный PDF презентации: <https://adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
+- Персональные запуски workflow и скачиваемые CI-артефакты: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml>
+- Персональный workflow мониторинга живой публикации: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml>
+- Сайт организации: <https://realagiorganization.github.io/blabla_agency/>
+- Актуальный PDF презентации организации: <https://realagiorganization.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
+- Запуски workflow организации и скачиваемые CI-артефакты: <https://github.com/realagiorganization/blabla_agency/actions/workflows/presentation.yml>
+- Workflow организации для мониторинга живой публикации: <https://github.com/realagiorganization/blabla_agency/actions/workflows/verification-monitor.yml>
+- Общий шаблон GitHub Pages для любого зеркала: `https://<owner>.github.io/blabla_agency/`
+- Общий шаблон PDF для любого зеркала: `https://<owner>.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf`
 
 Эти ссылки начнут работать после первой успешной сборки GitHub Actions и деплоя GitHub Pages.
 
@@ -81,12 +91,13 @@ make site
 ### Локальная верификация и мониторинг
 
 ```bash
+make content-policy
 make lint
 make verify
 make monitor
 ```
 
-`make lint` проверяет форматирование Markdown, структуру YAML и синтаксис shell-скриптов. `make verify` пересобирает PDF и сайт, проверяет сгенерированные результаты и записывает манифест артефактов. `make monitor` проверяет последний результат workflow и живые URL сайта и PDF.
+`make content-policy` проверяет порядок двуязычных секций и безопасные для деплоя публичные ссылки. `make lint` проверяет форматирование Markdown, структуру YAML, синтаксис shell-скриптов и content policy. `make verify` пересобирает PDF и сайт, проверяет сгенерированные результаты и записывает манифест артефактов. `make monitor` проверяет последний результат workflow и живые URL сайта и PDF.
 
 ### CI-конвейер
 

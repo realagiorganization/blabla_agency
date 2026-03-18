@@ -27,15 +27,46 @@ if [[ "$latest_run_json" == "[]" ]]; then
   exit 1
 fi
 
+run_title="$(echo "$latest_run_json" | jq -r '.[0].displayTitle')"
+run_id="$(echo "$latest_run_json" | jq -r '.[0].databaseId')"
+run_status="$(echo "$latest_run_json" | jq -r '.[0].status')"
+run_conclusion="$(echo "$latest_run_json" | jq -r '.[0].conclusion // "pending"')"
+run_created_at="$(echo "$latest_run_json" | jq -r '.[0].createdAt')"
+run_url="$(echo "$latest_run_json" | jq -r '.[0].url')"
+
 site_status="$(curl -L -s -o /dev/null -w '%{http_code}' "$SITE_URL")"
 pdf_status="$(curl -L -s -o /dev/null -w '%{http_code}' "$PDF_URL")"
 
-echo "Latest workflow run:"
-echo "$latest_run_json" | jq -r '.[0] | "  title: \(.displayTitle)\n  id: \(.databaseId)\n  status: \(.status)\n  conclusion: \(.conclusion // "pending")\n  created_at: \(.createdAt)\n  url: \(.url)"'
-echo
-echo "Live endpoint checks:"
-echo "  site_status: $site_status $SITE_URL"
-echo "  pdf_status:  $pdf_status $PDF_URL"
+summary="$(
+  cat <<EOF
+# Live verification summary
+
+- Repository: \`$REPO\`
+- Workflow file: \`$WORKFLOW_FILE\`
+- Latest run title: \`$run_title\`
+- Latest run id: \`$run_id\`
+- Latest run status: \`$run_status\`
+- Latest run conclusion: \`$run_conclusion\`
+- Latest run created at: \`$run_created_at\`
+- Latest run URL: $run_url
+- Site URL: $SITE_URL
+- Site status: \`$site_status\`
+- PDF URL: $PDF_URL
+- PDF status: \`$pdf_status\`
+EOF
+)"
+
+echo "$summary"
+
+if [[ -n "${MONITOR_OUTPUT_DIR:-}" ]]; then
+  mkdir -p "$MONITOR_OUTPUT_DIR"
+  printf '%s\n' "$summary" > "$MONITOR_OUTPUT_DIR/summary.md"
+  printf '%s\n' "$latest_run_json" > "$MONITOR_OUTPUT_DIR/latest-run.json"
+fi
+
+if [[ "$run_status" != "completed" || "$run_conclusion" != "success" ]]; then
+  exit 1
+fi
 
 if [[ "$site_status" != "200" || "$pdf_status" != "200" ]]; then
   exit 1
