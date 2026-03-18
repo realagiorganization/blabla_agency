@@ -11,7 +11,8 @@ test -f build/blabla_agency_presentation.pdf
 test -f site/index.html
 test -f site/artifacts/blabla_agency_presentation.pdf
 
-manifest_path="build/artifact-manifest.md"
+mkdir -p artifacts
+manifest_path="artifacts/blabla-agency-artifact-manifest.md"
 pdf_sha="$(sha256sum build/blabla_agency_presentation.pdf | awk '{print $1}')"
 site_sha="$(sha256sum site/index.html | awk '{print $1}')"
 site_pdf_sha="$(sha256sum site/artifacts/blabla_agency_presentation.pdf | awk '{print $1}')"

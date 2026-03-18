@@ -28,4 +28,4 @@ monitor:
 	./scripts/monitor_verification.sh
 
 clean:
-	rm -rf build site
+	rm -rf artifacts build site

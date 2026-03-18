@@ -91,7 +91,7 @@ jobs:
         uses: actions/upload-artifact@v7.0.0
         with:
           name: blabla-agency-artifact-manifest
-          path: build/artifact-manifest.md
+          path: artifacts/blabla-agency-artifact-manifest.md
 
       - name: Upload GitHub Pages artifact
         if: github.event_name != 'pull_request'
