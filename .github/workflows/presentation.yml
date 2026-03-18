@@ -12,53 +12,90 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  PYTHON_VERSION: "3.12"
+
 concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6.2.0
         with:
-          python-version: "3.12"
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: |
+            requirements-docs.txt
+            requirements-dev.txt
 
-      - name: Install documentation dependencies
-        run: python -m pip install --upgrade pip && pip install -r requirements-docs.txt
+      - name: Prepare virtual environment
+        run: ./scripts/setup_venv.sh
+
+      - name: Lint repository sources
+        run: ./scripts/lint_repo.sh
+
+  build:
+    needs: lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6.0.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v6.2.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: |
+            requirements-docs.txt
+            requirements-dev.txt
+
+      - name: Prepare virtual environment
+        run: ./scripts/setup_venv.sh
 
       - name: Build Beamer PDF
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@4.0.0
         with:
           root_file: slides/blabla_agency_presentation.tex
           args: -lualatex -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build
 
-      - name: Build MkDocs site
+      - name: Build MkDocs site and staged artifacts
         run: |
-          mkdocs build --strict --site-dir site
-          mkdir -p site/artifacts
-          cp build/blabla_agency_presentation.pdf site/artifacts/blabla_agency_presentation.pdf
+          ./scripts/stage_site.sh
+          ./scripts/verify_outputs.sh
+          ./scripts/write_artifact_manifest.sh >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: blabla-agency-presentation-pdf
           path: build/blabla_agency_presentation.pdf
 
       - name: Upload site artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.0
         with:
           name: blabla-agency-site
           path: site
 
+      - name: Upload artifact manifest
+        uses: actions/upload-artifact@v7.0.0
+        with:
+          name: blabla-agency-artifact-manifest
+          path: build/artifact-manifest.md
+
       - name: Upload GitHub Pages artifact
         if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4.0.0
         with:
           path: site
 
@@ -74,4 +111,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5

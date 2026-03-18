@@ -22,12 +22,13 @@ These links become live after the first successful GitHub Actions build and GitH
 
 - `slides/` contains the Beamer presentation source.
 - `docs/` contains the bilingual Markdown site content.
+- `scripts/` contains the modular local automation used by both humans and CI.
 - `.github/workflows/` contains CI/CD for PDF builds, site builds, artifact uploads, and GitHub Pages deployment.
 
 ### Local build
 
 ```bash
-python -m pip install -r requirements-docs.txt
+make venv
 make pdf
 make site
 ```
@@ -35,11 +36,17 @@ make site
 ### Local verification and monitoring
 
 ```bash
+make lint
 make verify
 make monitor
 ```
 
-`make verify` rebuilds the PDF and site in a local virtual environment. `make monitor` checks the latest workflow result plus the live site and PDF URLs.
+`make lint` checks Markdown formatting, YAML structure, and shell syntax. `make verify` rebuilds the PDF and site, verifies the generated outputs, and writes an artifact manifest. `make monitor` checks the latest workflow result plus the live site and PDF URLs.
+
+### CI pipeline
+
+- `presentation.yml` runs staged lint and build jobs, uses pip caching, uploads PDF/site/manifest artifacts, and deploys Pages on `master`.
+- `verification-monitor.yml` checks that the live site and live PDF remain reachable after deployment.
 
 ## Русский
 
@@ -60,12 +67,13 @@ make monitor
 
 - `slides/` содержит исходник Beamer-презентации.
 - `docs/` содержит двуязычный Markdown-сайт.
+- `scripts/` содержит модульную локальную автоматизацию, используемую и людьми, и CI.
 - `.github/workflows/` содержит CI/CD для сборки PDF, сборки сайта, загрузки артефактов и деплоя на GitHub Pages.
 
 ### Локальная сборка
 
 ```bash
-python -m pip install -r requirements-docs.txt
+make venv
 make pdf
 make site
 ```
@@ -73,8 +81,14 @@ make site
 ### Локальная верификация и мониторинг
 
 ```bash
+make lint
 make verify
 make monitor
 ```
 
-`make verify` пересобирает PDF и сайт в локальном virtual environment. `make monitor` проверяет последний результат workflow и живые URL сайта и PDF.
+`make lint` проверяет форматирование Markdown, структуру YAML и синтаксис shell-скриптов. `make verify` пересобирает PDF и сайт, проверяет сгенерированные результаты и записывает манифест артефактов. `make monitor` проверяет последний результат workflow и живые URL сайта и PDF.
+
+### CI-конвейер
+
+- `presentation.yml` запускает поэтапные jobs для lint и build, использует pip cache, загружает артефакты PDF/сайта/манифеста и деплоит Pages на `master`.
+- `verification-monitor.yml` проверяет, что опубликованные сайт и PDF остаются доступными после деплоя.

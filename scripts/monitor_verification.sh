@@ -1,33 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$script_dir/common.sh"
+
 if [[ $# -ge 1 ]]; then
   REPO="$1"
 else
-  remote_url="$(git remote get-url origin 2>/dev/null || true)"
-  if [[ "$remote_url" =~ github\.com[:/]([^/]+)/([^/.]+)(\.git)?$ ]]; then
-    REPO="${BASH_REMATCH[1]}/${BASH_REMATCH[2]}"
-  else
+  if ! REPO="$(repo_slug_from_remote origin)"; then
     REPO="Adminrealagi/blabla_agency"
   fi
 fi
 
 WORKFLOW_FILE="${2:-presentation.yml}"
-OWNER="${REPO%/*}"
-REPO_NAME="${REPO#*/}"
-OWNER_LOWER="$(printf '%s' "$OWNER" | tr '[:upper:]' '[:lower:]')"
-SITE_URL="${3:-https://${OWNER_LOWER}.github.io/${REPO_NAME}/}"
+SITE_URL="${3:-$(pages_base_url_from_repo "$REPO")}"
 PDF_URL="${4:-${SITE_URL}artifacts/blabla_agency_presentation.pdf}"
 
-if ! command -v gh >/dev/null 2>&1; then
-  echo "GitHub CLI (gh) is required." >&2
-  exit 1
-fi
-
-if ! command -v jq >/dev/null 2>&1; then
-  echo "jq is required." >&2
-  exit 1
-fi
+require_command gh
+require_command jq
+require_command curl
 
 latest_run_json="$(gh run list --repo "$REPO" --workflow "$WORKFLOW_FILE" --limit 1 --json databaseId,displayTitle,status,conclusion,url,createdAt)"
 

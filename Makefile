@@ -1,42 +1,31 @@
 SHELL := /bin/bash
 
-PRESENTATION_TEX := slides/blabla_agency_presentation.tex
-BUILD_DIR := build
-SITE_DIR := site
-PRESENTATION_PDF := $(BUILD_DIR)/blabla_agency_presentation.pdf
-TEX_FLAGS := -interaction=nonstopmode -halt-on-error -file-line-error -output-directory=$(BUILD_DIR)
-VENV_DIR := .venv
-VENV_BIN := $(VENV_DIR)/bin
+.PHONY: deps venv lint pdf site artifacts verify ci monitor clean
 
-.PHONY: deps venv pdf site verify monitor clean
+deps: venv
 
-deps:
-	python -m pip install -r requirements-docs.txt
+venv:
+	./scripts/setup_venv.sh
 
-$(VENV_BIN)/mkdocs: requirements-docs.txt
-	python -m venv $(VENV_DIR)
-	$(VENV_BIN)/pip install -r requirements-docs.txt
-
-venv: $(VENV_BIN)/mkdocs
+lint:
+	./scripts/lint_repo.sh
 
 pdf:
-	mkdir -p $(BUILD_DIR)
-	lualatex $(TEX_FLAGS) $(PRESENTATION_TEX)
-	lualatex $(TEX_FLAGS) $(PRESENTATION_TEX)
+	./scripts/build_pdf.sh
 
-site: pdf
-	mkdocs build --strict --site-dir $(SITE_DIR)
-	mkdir -p $(SITE_DIR)/artifacts
-	cp $(PRESENTATION_PDF) $(SITE_DIR)/artifacts/blabla_agency_presentation.pdf
+site:
+	./scripts/build_site.sh
 
-verify: venv
-	PATH="$(PWD)/$(VENV_BIN):$$PATH" $(MAKE) clean site
-	test -f $(PRESENTATION_PDF)
-	test -f $(SITE_DIR)/index.html
-	test -f $(SITE_DIR)/artifacts/blabla_agency_presentation.pdf
+artifacts:
+	./scripts/write_artifact_manifest.sh
+
+verify:
+	./scripts/verify_build.sh
+
+ci: lint verify
 
 monitor:
 	./scripts/monitor_verification.sh
 
 clean:
-	rm -rf $(BUILD_DIR) $(SITE_DIR)
+	rm -rf build site

@@ -2,6 +2,7 @@
 *
 !.gitignore
 !.gitattributes
+!.yamllint.yml
 !AGENTS.md
 !AGENTS.md.d/
 !AGENTS.md.d/**
@@ -9,6 +10,7 @@
 !Makefile
 !mkdocs.yml
 !requirements-docs.txt
+!requirements-dev.txt
 !.github/
 !.github/workflows/
 !.github/workflows/**
