@@ -1,0 +1,214 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{polyglossia}
+
+\setmainlanguage{english}
+\setotherlanguage{russian}
+\setsansfont{DejaVu Sans}
+\setmainfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\newfontfamily\russianfont{DejaVu Sans}
+\newfontfamily\russianfontsf{DejaVu Sans}
+
+\usetheme{Madrid}
+\usecolortheme{seagull}
+\setbeamertemplate{navigation symbols}{}
+
+\title{blabla agency}
+\subtitle{From raw conversations to a continuously delivered website\\От сырых разговоров к непрерывно поставляемому сайту}
+\author{blabla agency}
+\date{\today}
+
+\newcommand{\BilingualFrame}[4]{
+  \begin{frame}{#1}
+    \small
+    \begin{columns}[T,onlytextwidth]
+      \column{0.48\textwidth}
+      \textbf{English}
+      #2
+      \column{0.48\textwidth}
+      \textbf{Русский}
+      #3
+    \end{columns}
+    \vfill
+    {\tiny #4}
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\BilingualFrame
+  {Core promise / Базовое обещание}
+  {
+    \begin{itemize}
+      \item blabla agency turns messy calls, recordings, chats, and files into a versioned public website.
+      \item The specification is extracted from the conversation instead of waiting for a perfect written brief.
+      \item Promotion and maintenance are built into the same delivery loop.
+    \end{itemize}
+  }
+  {
+    \begin{itemize}
+      \item blabla agency превращает хаотичные звонки, записи, чаты и файлы в версионируемый публичный сайт.
+      \item Спецификация извлекается из разговора, а не ждет идеального письменного брифа.
+      \item Продвижение и поддержка встроены в тот же цикл поставки.
+    \end{itemize}
+  }
+  {Repository docs: README.md, docs/specification.md}
+
+\BilingualFrame
+  {What comes in / Что приходит на вход}
+  {
+    \begin{itemize}
+      \item Zoom workshops and sales calls
+      \item recorded video and audio conversations
+      \item chat exports and copied threads
+      \item dumped files, drafts, and loose notes
+    \end{itemize}
+  }
+  {
+    \begin{itemize}
+      \item Zoom-воркшопы и звонки по продажам
+      \item записанные видео- и аудиоразговоры
+      \item экспорт чатов и скопированные треды
+      \item выгруженные файлы, черновики и разрозненные заметки
+    \end{itemize}
+  }
+  {The input can stay raw; the agency provides the structure.}
+
+\BilingualFrame
+  {What gets extracted / Что извлекается}
+  {
+    \begin{itemize}
+      \item page goals and navigation
+      \item buyer language and objections
+      \item offers, proof, and case structure
+      \item delivery constraints and maintenance priorities
+    \end{itemize}
+  }
+  {
+    \begin{itemize}
+      \item цели страниц и навигация
+      \item язык покупателя и возражения
+      \item предложения, proof и структура кейсов
+      \item ограничения поставки и приоритеты поддержки
+    \end{itemize}
+  }
+  {See docs/specification.md for the translation layer.}
+
+\BilingualFrame
+  {Continuous delivery loop / Цикл непрерывной поставки}
+  {
+    \begin{itemize}
+      \item capture new conversations
+      \item distill decisions into the specification
+      \item publish website and presentation updates
+      \item keep everything versioned in git
+    \end{itemize}
+  }
+  {
+    \begin{itemize}
+      \item собирать новые разговоры
+      \item дистиллировать решения в спецификацию
+      \item публиковать обновления сайта и презентации
+      \item хранить все в git с версиями
+    \end{itemize}
+  }
+  {The website becomes the latest agreed business state.}
+
+\BilingualFrame
+  {Website outputs / Выходы сайта}
+  {
+    \begin{itemize}
+      \item homepage and positioning
+      \item offer and capability pages
+      \item proof blocks, FAQ, and case studies
+      \item narrative assets ready for promotion
+    \end{itemize}
+  }
+  {
+    \begin{itemize}
+      \item главная страница и позиционирование
+      \item страницы предложения и capability-страницы
+      \item proof-блоки, FAQ и case study
+      \item narrative-артефакты, готовые к продвижению
+    \end{itemize}
+  }
+  {The same source material feeds both delivery and promotion.}
+
+\BilingualFrame
+  {Use cases / Use case'ы}
+  {
+    \begin{itemize}
+      \item SaaS founders shaping a public story from demos and interviews
+      \item industrial suppliers modernizing fragmented technical collateral
+      \item expert-led agencies selling through calls instead of polished decks
+      \item teams that need weekly stakeholder alignment reflected on the site
+    \end{itemize}
+  }
+  {
+    \begin{itemize}
+      \item SaaS-фаундеры, собирающие публичную историю из демо и интервью
+      \item индустриальные поставщики, модернизирующие разрозненный технический collateral
+      \item экспертные агентства, продающие через звонки, а не через отполированные deck'и
+      \item команды, которым нужно отражать еженедельное выравнивание стейкхолдеров на сайте
+    \end{itemize}
+  }
+  {Detailed examples live in docs/use-cases.md.}
+
+\BilingualFrame
+  {Promotion plus maintenance / Продвижение плюс поддержка}
+  {
+    \begin{itemize}
+      \item every conversation can refine the offer
+      \item every refined offer can update the public site
+      \item every update stays traceable through version control
+      \item the site does not drift away from the real business
+    \end{itemize}
+  }
+  {
+    \begin{itemize}
+      \item каждый разговор может уточнить предложение
+      \item каждое уточнение может обновить публичный сайт
+      \item каждое обновление остается прослеживаемым через version control
+      \item сайт не отрывается от реального бизнеса
+    \end{itemize}
+  }
+  {This is a maintained publishing system, not a one-off brochure.}
+
+\BilingualFrame
+  {Repository outputs / Выходы репозитория}
+  {
+    \begin{itemize}
+      \item Beamer presentation in \texttt{slides/}
+      \item Markdown site in \texttt{docs/}
+      \item GitHub Actions for PDF artifacts and Pages deployment
+      \item README links for the latest public outputs
+    \end{itemize}
+  }
+  {
+    \begin{itemize}
+      \item Beamer-презентация в \texttt{slides/}
+      \item Markdown-сайт в \texttt{docs/}
+      \item GitHub Actions для PDF-артефактов и деплоя на Pages
+      \item ссылки в README на последние публичные выходы
+    \end{itemize}
+  }
+  {CI/CD keeps the presentation and site continuously publishable.}
+
+\begin{frame}{Contact surface / Поверхность контакта}
+  \small
+  \begin{itemize}
+    \item English: The repository is ready to evolve into a continuously updated sales and delivery surface for blabla agency.
+    \item Русский: Репозиторий готов развиваться в непрерывно обновляемую поверхность продаж и поставки для blabla agency.
+    \item GitHub Pages target: \url{https://Adminrealagi.github.io/blabla_agency/}
+    \item Latest PDF target: \url{https://Adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf}
+  \end{itemize}
+\end{frame}
+
+\end{document}

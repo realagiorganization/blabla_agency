@@ -1,0 +1,29 @@
+site_name: blabla agency
+site_description: Bilingual presentation and specification for blabla agency.
+site_url: https://Adminrealagi.github.io/blabla_agency/
+repo_url: https://github.com/Adminrealagi/blabla_agency
+repo_name: Adminrealagi/blabla_agency
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Specification: specification.md
+  - Use Cases: use-cases.md
+  - Delivery Model: delivery-model.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+
+validation:
+  omitted_files: ignore

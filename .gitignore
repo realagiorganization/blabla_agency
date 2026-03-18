@@ -1,0 +1,46 @@
+# Ignore everything except the explicit repository scaffold.
+*
+!.gitignore
+!.gitattributes
+!AGENTS.md
+!AGENTS.md.d/
+!AGENTS.md.d/**
+!README.md
+!Makefile
+!mkdocs.yml
+!requirements-docs.txt
+!.github/
+!.github/workflows/
+!.github/workflows/**
+!docs/
+!docs/**
+!slides/
+!slides/**
+!.codex/
+!.codex/skills/
+!.codex/skills/.gitkeep
+!.codex/logs/
+!.codex/logs/.gitkeep
+!.codex/crash*
+!.codex/crash*/
+!.codex/crash*/**
+
+# Generated outputs and local tooling.
+build/
+site/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Never track large installers or disk images.
+*.AppImage
+*.appimage
+*.dmg
+*.exe
+*.msi
+*.iso
+*.img
+*.qcow2
+*.vmdk
+*.vdi
