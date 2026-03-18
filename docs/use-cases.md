@@ -2,36 +2,36 @@
 
 ## English
 
-### SaaS launch narrative
+### Internal operating system
 
-A founder has months of demos, investor calls, and customer interviews, but no stable public story. blabla agency converts those conversations into a clear site structure, product positioning, proof sections, and a deck that can be reused in fundraising and sales.
+A client has a rough outline for an internal tool that coordinates people, queues, files, and approvals. The actual workflow only becomes clear once real operators walk through it on calls and screen shares.
 
-### Industrial supplier modernization
+### Complex program or automation
 
-A traditional supplier has technical calls, WhatsApp threads, PDFs, and catalog files spread across teams. The agency distills them into an industry-standard website with updated offers, capability pages, maintenance workflows, and clearer buyer language.
+A service team needs scripts, agent loops, parsers, and long-running automation with many edge cases. Most of the nuance is hidden in chat clarifications and post-demo notes rather than in the first spec draft.
 
-### Expert-led services business
+### Website plus application surface
 
-A consulting or design firm sells through conversations instead of polished collateral. Recorded workshops and proposal calls become a public site, case-driven promotion pages, and a continuously refined specification of what is actually being sold.
+A company needs a public website, a protected client area, and operational dashboards. The narrative and product behavior are refined together through recorded review sessions.
 
-### Continuous stakeholder alignment
+### High-complexity technical product
 
-A venture studio, product team, or accelerator keeps making decisions in weekly calls. Instead of losing that context in chat history, the agency keeps turning it into versioned site updates, linked use cases, and presentation artifacts that remain current.
+A platform with integrations, deployment environments, and reliability constraints cannot be described once and then left alone. The demo state and technical discussion have to keep feeding the next implementation pass.
 
 ## Русский
 
-### Сценарий запуска SaaS
+### Внутренняя операционная система
 
-У фаундера есть месяцы демо, звонков с инвесторами и интервью с клиентами, но нет стабильной публичной истории. blabla agency превращает эти разговоры в понятную структуру сайта, позиционирование продукта, proof-блоки и deck, который можно переиспользовать во фандрайзинге и продажах.
+У клиента есть грубый outline внутреннего инструмента, который координирует людей, очереди, файлы и согласования. Реальный workflow становится понятен только после того, как операторы проходят его на звонках и screen share.
 
-### Модернизация индустриального поставщика
+### Сложная программа или автоматизация
 
-У традиционного поставщика технические звонки, WhatsApp-треды, PDF и каталожные файлы разбросаны между командами. Агентство собирает это в industry-standard сайт с обновленными предложениями, capability-страницами, workflow поддержки и более ясным языком для покупателя.
+Команде сервиса нужны скрипты, агентные циклы, парсеры и долгоживущая автоматизация с множеством edge case'ов. Большая часть нюансов скрыта в чат-уточнениях и заметках после демо, а не в первом черновике спецификации.
 
-### Экспертный сервисный бизнес
+### Сайт плюс прикладная поверхность
 
-Консалтинговая или дизайн-компания продает через разговоры, а не через отполированный collateral. Записанные воркшопы и proposal-звонки превращаются в публичный сайт, case-driven страницы продвижения и постоянно уточняемую спецификацию того, что реально продается.
+Компании нужны публичный сайт, закрытая клиентская зона и операционные дашборды. Нарратив и поведение продукта уточняются вместе через записанные review-сессии.
 
-### Непрерывное выравнивание стейкхолдеров
+### Технический продукт высокой сложности
 
-В venture studio, продуктовой команде или акселераторе решения постоянно принимаются на еженедельных созвонах. Вместо того чтобы терять этот контекст в истории чатов, агентство непрерывно переводит его в версионируемые обновления сайта, связанные use case'ы и презентационные артефакты.
+Платформу с интеграциями, deployment-окружениями и ограничениями надежности нельзя описать один раз и оставить как есть. Состояние демо и техническое обсуждение должны непрерывно питать следующий проход реализации.

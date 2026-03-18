@@ -2,92 +2,56 @@
 
 ## English
 
-### Product principle
+### The specification is a moving target on purpose
 
-blabla agency assumes that the real brief already exists inside calls, recordings, chats, and attached files. The agency extracts decisions, unresolved questions, positioning, objections, user stories, and delivery constraints from those materials, then turns them into a living website specification.
+The client draft starts the project, but it does not finish the specification. The real specification is assembled from discussion plus implementation evidence.
 
-### Input surface
+### What populates the AI context
 
-- Recorded Zoom calls
-- Screen recordings and demos
-- Audio notes
-- Chat logs
-- Uploaded files and drafts
+- draft technical specification
+- call and video call recordings
+- transcripts and summary notes
+- chat threads and inline comments
+- current demo or staging state
+- deployment traces, failures, and environment notes
 
-### Translation layer
+### What the AI agents need from that context
 
-The raw material is transformed into:
+- current scope boundaries
+- unresolved questions
+- recorded tradeoffs
+- latest approved behavior
+- demo gaps relative to the last review
+- next iteration priorities
 
-- page goals
-- information architecture
-- buyer language and proof points
-- acceptance criteria
-- content backlog
-- maintenance priorities
+### Result
 
-### Output surface
-
-The continuously delivered site includes:
-
-- homepage and offer framing
-- product or service detail pages
-- proof, case study, and FAQ structure
-- navigation shaped by current stakeholder decisions
-- versioned updates connected to new conversations
-
-### Governance
-
-Every new conversation can change the specification. That means the site is not treated as a one-time project but as a maintained product whose public messaging stays synchronized with the latest business intent.
-
-### Success criteria
-
-- stakeholders stop repeating context in every meeting
-- the website becomes the latest agreed state
-- promotion material is produced from the same source of truth
-- use cases stay linked to the evolving specification
+The repository becomes a context vessel. It stores not only the latest code and docs, but also the structured memory that makes the next generation pass sharper.
 
 ## Русский
 
-### Принцип продукта
+### Спецификация намеренно остается движущейся целью
 
-blabla agency исходит из того, что реальный бриф уже существует внутри звонков, записей, чатов и приложенных файлов. Агентство извлекает из этих материалов решения, незакрытые вопросы, позиционирование, возражения, пользовательские истории и ограничения поставки, а затем превращает их в живую спецификацию сайта.
+Черновик клиента запускает проект, но не завершает спецификацию. Реальная спецификация собирается из обсуждения и доказательств реализации.
 
-### Поверхность входа
+### Что наполняет AI-контекст
 
-- записанные Zoom-звонки
-- записи экрана и демо
-- аудиозаметки
-- логи чатов
-- загруженные файлы и черновики
+- черновая техническая спецификация
+- записи звонков и видеозвонков
+- транскрипты и summary-заметки
+- чат-треды и inline-комментарии
+- текущее состояние демо или staging
+- deployment-трейсы, сбои и environment-заметки
 
-### Слой трансляции
+### Что AI-агентам нужно из этого контекста
 
-Сырой материал превращается в:
+- текущие границы scope
+- незакрытые вопросы
+- зафиксированные trade-off'ы
+- последнее одобренное поведение
+- разрыв между демо и последним ревью
+- приоритеты следующей итерации
 
-- цели страниц
-- информационную архитектуру
-- язык покупателя и доказательные точки
-- критерии приемки
-- контентный backlog
-- приоритеты поддержки
+### Результат
 
-### Поверхность выхода
-
-Непрерывно поставляемый сайт включает:
-
-- главную страницу и формулировку предложения
-- подробные страницы продукта или услуги
-- структуру proof, case study и FAQ
-- навигацию, сформированную текущими решениями стейкхолдеров
-- версионируемые обновления, связанные с новыми разговорами
-
-### Управление
-
-Каждый новый разговор может изменить спецификацию. Это означает, что сайт рассматривается не как разовый проект, а как поддерживаемый продукт, у которого публичное сообщение синхронизировано с последним бизнес-замыслом.
-
-### Критерии успеха
-
-- стейкхолдеры перестают заново проговаривать контекст на каждой встрече
-- сайт становится последним согласованным состоянием
-- материалы для продвижения производятся из того же источника истины
-- use case'ы остаются связанными с развивающейся спецификацией
+Репозиторий становится сосудом контекста. Он хранит не только актуальный код и документацию, но и структурированную память, которая делает следующий проход генерации точнее.

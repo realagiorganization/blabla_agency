@@ -2,52 +2,46 @@
 
 ## English
 
-**blabla agency** converts raw conversational material into a continuously delivered website.
+**blabla agency** is not positioned here as a brochure shop. The repository describes an agency that can deliver systems, programs, websites, apps, automations, and software of any complexity by working from a living technical conversation.
 
-### What gets ingested
+### Core idea
 
-- Zoom meetings and workshop recordings
-- Video and audio conversations
-- Chat threads and exported discussions
-- File dumps, drafts, and loose notes
+- the client starts with a draft technical specification
+- the draft is expanded through long discussions on calls, video calls, chat, comments, and demo review
+- the recorded context of those discussions plus the current demo state becomes the AI generation context
+- the pipeline generates and deploys a new demo or staging version
+- client feedback is captured against that real version and folded into the next pass
 
-### What gets delivered
+### What the repo publishes
 
-- A versioned website that evolves with the specification
-- Promotion-ready messaging and page structure
-- Linked use cases that explain where the offer applies
-- A presentation deck for founders, sales, and partner conversations
-- Ongoing maintenance so the public site stays aligned with the latest talks
+- a React GitHub Pages site for the agency narrative
+- a Storybook build for reusable component review
+- a bilingual Beamer presentation
+- repository docs explaining cadence, specification logic, and verification
 
-### Linked pages
+### Why recorded context matters
 
-- [Specification](specification.md)
-- [Use cases](use-cases.md)
-- [Delivery model](delivery-model.md)
-- <a href="artifacts/blabla_agency_presentation.pdf">Latest presentation PDF</a>
+The AI pipeline does not rely on a static written brief alone. It uses the recorded memory of the project: calls, transcripts, chat threads, issue comments, deployment notes, and the visible state of the current demo.
 
 ## Русский
 
-**blabla agency** превращает сырой разговорный материал в непрерывно поставляемый сайт.
+**blabla agency** позиционируется здесь не как студия брошюрных сайтов. Репозиторий описывает агентство, которое может поставлять системы, программы, сайты, приложения, автоматизации и софт любой сложности, работая от живого технического разговора.
 
-### Что поступает на вход
+### Базовая идея
 
-- Zoom-встречи и записи воркшопов
-- Видео- и аудиоразговоры
-- Чат-треды и экспортированные обсуждения
-- Выгрузки файлов, черновики и разрозненные заметки
+- клиент начинает с черновой технической спецификации
+- черновик раскрывается через длинные обсуждения в звонках, видеозвонках, чатах, комментариях и ревью демо
+- записанный контекст этих обсуждений вместе с текущим состоянием демо становится AI-контекстом генерации
+- конвейер генерирует и деплоит новую demo- или staging-версию
+- клиентский фидбек собирается уже по реальной версии и замыкается в следующий проход
 
-### Что поступает на выход
+### Что публикует репозиторий
 
-- Версионируемый сайт, который развивается вместе со спецификацией
-- Сообщение для продвижения и структура страниц
-- Связанные use case'ы, объясняющие, где предложение работает
-- Презентационный deck для фаундеров, продаж и партнерских разговоров
-- Постоянная поддержка, чтобы публичный сайт соответствовал последним обсуждениям
+- React-сайт на GitHub Pages для нарратива агентства
+- Storybook-сборку для ревью переиспользуемых компонентов
+- двуязычную Beamer-презентацию
+- документацию репозитория, объясняющую cadence, логику спецификации и верификацию
 
-### Связанные страницы
+### Почему записанный контекст важен
 
-- [Спецификация](specification.md)
-- [Use case'ы](use-cases.md)
-- [Модель поставки](delivery-model.md)
-- <a href="artifacts/blabla_agency_presentation.pdf">Актуальный PDF презентации</a>
+AI-конвейер не опирается только на статический письменный бриф. Он использует записанную память проекта: звонки, транскрипты, чат-треды, комментарии в issues, заметки о деплое и видимое состояние текущего демо.

@@ -2,78 +2,64 @@
 
 ## English
 
-### What is verified
+### What is verified now
 
-- Markdown formatting, YAML syntax, and shell syntax still pass linting
-- bilingual section order and mirror-safe public links still pass content policy checks
-- the Beamer presentation still compiles into `build/blabla_agency_presentation.pdf`
-- the MkDocs site still builds into `site/`
-- a build manifest is emitted for the generated artifacts
-- the deployed public site returns HTTP 200
-- the deployed public PDF returns HTTP 200
+- Markdown, YAML, shell, and content policy checks
+- React type safety
+- React/Vitest tests
+- Beamer PDF build
+- React production site build
+- Storybook static build
+- staged GitHub Pages output
+- artifact manifest generation
+- live website HTTP 200
+- live Storybook HTTP 200
+- live PDF HTTP 200
 
-### Local flow
-
-Run:
+### Local commands
 
 ```bash
 make lint
+npm run test:run
 make verify
 make monitor
 ```
 
-`make lint` checks Markdown, YAML, shell sources, bilingual section order, and deployment-safe public links.
+`make verify` is the full local proof: it rebuilds the PDF, runs tests, stages the React site and Storybook, checks the generated output, and writes the artifact manifest.
 
-`make verify` creates or refreshes `.venv`, installs the documentation and lint dependencies, rebuilds the PDF and site, confirms that the expected artifacts exist, and writes a build manifest.
+### GitHub Actions
 
-`make monitor` uses GitHub CLI plus `curl` to report and enforce:
-
-- the latest presentation workflow status and conclusion
-- the live website HTTP status
-- the live PDF HTTP status
-
-### GitHub Actions flow
-
-Two workflows now cover the publishing surface:
-
-- `presentation.yml` lints the repository, builds the PDF, builds the site, uploads artifacts, and deploys GitHub Pages
-- `verification-monitor.yml` runs on a schedule and on demand to confirm that the deployed site and PDF remain reachable
+- `presentation.yml` builds PDF + React site + Storybook, uploads artifacts, and deploys Pages
+- `verification-monitor.yml` verifies that the published website, Storybook, and PDF remain reachable
 
 ## Русский
 
-### Что проверяется
+### Что теперь проверяется
 
-- lint для Markdown, YAML и shell по-прежнему проходит успешно
-- проверки content policy для порядка двуязычных секций и безопасных для зеркал публичных ссылок по-прежнему проходят успешно
-- Beamer-презентация по-прежнему компилируется в `build/blabla_agency_presentation.pdf`
-- MkDocs-сайт по-прежнему собирается в `site/`
-- для сгенерированных артефактов создается build manifest
-- опубликованный публичный сайт возвращает HTTP 200
-- опубликованный публичный PDF возвращает HTTP 200
+- проверки Markdown, YAML, shell и content policy
+- type safety React
+- тесты React/Vitest
+- сборка Beamer PDF
+- production-сборка React-сайта
+- статическая сборка Storybook
+- staged-выход GitHub Pages
+- генерация манифеста артефактов
+- HTTP 200 для живого сайта
+- HTTP 200 для живого Storybook
+- HTTP 200 для живого PDF
 
-### Локальный процесс
-
-Запуск:
+### Локальные команды
 
 ```bash
 make lint
+npm run test:run
 make verify
 make monitor
 ```
 
-`make lint` проверяет Markdown, YAML, shell-источники, порядок двуязычных секций и безопасные для деплоя публичные ссылки.
+`make verify` является полным локальным доказательством: он пересобирает PDF, запускает тесты, подготавливает React-сайт и Storybook, проверяет сгенерированный выход и пишет манифест артефактов.
 
-`make verify` создает или обновляет `.venv`, устанавливает зависимости документации и lint, пересобирает PDF и сайт, подтверждает, что ожидаемые артефакты существуют, и записывает build manifest.
+### GitHub Actions
 
-`make monitor` использует GitHub CLI и `curl`, чтобы показать и проверить:
-
-- статус и итог последнего workflow презентации
-- HTTP-статус живого сайта
-- HTTP-статус живого PDF
-
-### Поток GitHub Actions
-
-Теперь поверхность публикации покрывают два workflow:
-
-- `presentation.yml` выполняет lint репозитория, собирает PDF, собирает сайт, загружает артефакты и деплоит GitHub Pages
-- `verification-monitor.yml` запускается по расписанию и вручную, чтобы подтверждать доступность опубликованных сайта и PDF
+- `presentation.yml` собирает PDF + React-сайт + Storybook, загружает артефакты и деплоит Pages
+- `verification-monitor.yml` проверяет, что опубликованные сайт, Storybook и PDF остаются доступными

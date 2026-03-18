@@ -2,104 +2,120 @@
 
 ## English
 
-This repository is a bilingual LaTeX + Markdown publishing scaffold for **blabla agency**: an AI agency that turns Zoom talks, recorded video and audio conversations, chats, and dumped files into a continuously versioned website, an evolving specification, linked use cases, and a Beamer presentation.
+This repository is a bilingual React + Storybook + Beamer delivery surface for **blabla agency**: an agency that builds systems, programs, websites, apps, automations, and software of any complexity by turning a moving client conversation into versioned implementation.
 
-The operating promise is straightforward: no matter how raw the source material is, the agency continuously distills it into a structured web presence with promotion-ready messaging and ongoing maintenance.
+The operating cadence is explicit:
 
-### Live artifact links
+1. The client sends a draft technical specification.
+1. That draft is discussed at length in calls, video calls, chats, comments, and demo reviews.
+1. Those discussions are recorded, summarized, linked to the current demo state, and folded into an AI-ready context ledger.
+1. The AI pipeline generates code, interfaces, tests, content, and deployment updates, then ships a deployable demo or staging version.
+1. Client feedback is collected against the real demo, and the process repeats until the product is ready for the next production threshold.
 
-- Personal website: <https://adminrealagi.github.io/blabla_agency/>
-- Personal latest presentation PDF: <https://adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
-- Personal workflow runs and downloadable CI artifacts: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml>
-- Personal live verification monitor: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml>
-- Organization website: <https://realagiorganization.github.io/blabla_agency/>
-- Organization latest presentation PDF: <https://realagiorganization.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
-- Organization workflow runs and downloadable CI artifacts: <https://github.com/realagiorganization/blabla_agency/actions/workflows/presentation.yml>
-- Organization live verification monitor: <https://github.com/realagiorganization/blabla_agency/actions/workflows/verification-monitor.yml>
-- Generic GitHub Pages pattern for any mirror: `https://<owner>.github.io/blabla_agency/`
-- Generic PDF pattern for any mirror: `https://<owner>.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf`
+The key point is that recorded context is not treated as meeting residue. Recordings, transcripts, chat threads, issue comments, deployment traces, and the current demo version are all part of the working memory that populates the next AI generation pass.
 
-These links become live after the first successful GitHub Actions build and GitHub Pages deployment.
+### Canonical organization deployment
+
+- Website: <https://realagiorganization.github.io/blabla_agency/>
+- Storybook: <https://realagiorganization.github.io/blabla_agency/storybook/>
+- Latest presentation PDF: <https://realagiorganization.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
+- Build and deploy workflow: <https://github.com/realagiorganization/blabla_agency/actions/workflows/presentation.yml>
+- Live verification workflow: <https://github.com/realagiorganization/blabla_agency/actions/workflows/verification-monitor.yml>
+- Organization repository: <https://github.com/realagiorganization/blabla_agency>
+
+### Personal mirror
+
+- Website: <https://adminrealagi.github.io/blabla_agency/>
+- Storybook: <https://adminrealagi.github.io/blabla_agency/storybook/>
+- Latest presentation PDF: <https://adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
+- Build and deploy workflow: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml>
+- Live verification workflow: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml>
 
 ### Repository layout
 
-- `slides/` contains the Beamer presentation source.
-- `docs/` contains the bilingual Markdown site content.
-- `scripts/` contains the modular local automation used by both humans and CI.
-- `.github/workflows/` contains CI/CD for PDF builds, site builds, artifact uploads, and GitHub Pages deployment.
+- `src/` contains the React GitHub Pages site and the bilingual agency narrative rendered through reusable components.
+- `.storybook/` contains Storybook configuration for component-level review of the published UI building blocks.
+- `docs/` contains bilingual repository documentation that explains cadence, specification logic, use cases, and verification.
+- `slides/` contains the bilingual Beamer presentation source.
+- `scripts/` contains shared local automation for linting, tests, React builds, Storybook builds, PDF builds, staging, artifact manifests, and live verification.
 
-### Local build
+### Local workflow
 
 ```bash
+make node
 make venv
-make pdf
-make site
-```
-
-### Local verification and monitoring
-
-```bash
-make content-policy
 make lint
+npm run test:run
 make verify
 make monitor
 ```
 
-`make content-policy` checks bilingual section order and deployment-safe public links. `make lint` checks Markdown formatting, YAML structure, shell syntax, and the content policy. `make verify` rebuilds the PDF and site, verifies the generated outputs, and writes an artifact manifest. `make monitor` checks the latest workflow result plus the live site and PDF URLs.
+- `make lint` checks Markdown, workflow YAML, shell syntax, content policy, and React type safety.
+- `npm run test:run` runs the React/Vitest test suite.
+- `make verify` rebuilds the PDF, runs tests, stages the React site and Storybook, verifies outputs, and writes an artifact manifest.
+- `make monitor` verifies the latest workflow result plus the live website, Storybook, and PDF endpoints.
 
 ### CI pipeline
 
-- `presentation.yml` runs staged lint and build jobs, uses pip caching, uploads PDF/site/manifest artifacts, and deploys Pages on `master`.
-- `verification-monitor.yml` checks that the live site and live PDF remain reachable after deployment.
+- `presentation.yml` builds the Beamer PDF, runs the React typecheck and test flow, builds the React site, builds Storybook, uploads artifacts, and deploys GitHub Pages.
+- `verification-monitor.yml` reuses the repository monitor script to check the deployed site, Storybook, and PDF on a schedule or on demand.
 
 ## Русский
 
-Этот репозиторий представляет собой двуязычный LaTeX + Markdown каркас публикации для **blabla agency**: AI-агентства, которое превращает разговоры в Zoom, записанные видео- и аудиобеседы, чаты и выгруженные файлы в непрерывно версионируемый сайт, развивающуюся спецификацию, связанные use case'ы и Beamer-презентацию.
+Этот репозиторий представляет собой двуязычную React + Storybook + Beamer поверхность поставки для **blabla agency**: агентства, которое делает системы, программы, сайты, приложения, автоматизации и софт любой сложности, превращая развивающийся разговор с клиентом в версионируемую реализацию.
 
-Базовое обещание простое: каким бы сырым ни был исходный материал, агентство непрерывно превращает его в структурированное веб-представительство с готовым к продвижению сообщением и постоянной поддержкой.
+Рабочий cadence здесь зафиксирован явно:
 
-### Ссылки на артефакты
+1. Клиент присылает черновую техническую спецификацию.
+1. Этот черновик подробно обсуждается в звонках, видеозвонках, чатах, комментариях и ревью демо.
+1. Эти обсуждения записываются, суммируются, связываются с текущим состоянием демо и складываются в AI-ready реестр контекста.
+1. AI-конвейер генерирует код, интерфейсы, тесты, контент и deployment-обновления, а затем выкатывает deployable demo или staging-версию.
+1. Фидбек клиента собирается уже по реальному демо, и процесс повторяется до следующего production-порога.
 
-- Персональный сайт: <https://adminrealagi.github.io/blabla_agency/>
-- Персональный актуальный PDF презентации: <https://adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
-- Персональные запуски workflow и скачиваемые CI-артефакты: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml>
-- Персональный workflow мониторинга живой публикации: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml>
-- Сайт организации: <https://realagiorganization.github.io/blabla_agency/>
-- Актуальный PDF презентации организации: <https://realagiorganization.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
-- Запуски workflow организации и скачиваемые CI-артефакты: <https://github.com/realagiorganization/blabla_agency/actions/workflows/presentation.yml>
-- Workflow организации для мониторинга живой публикации: <https://github.com/realagiorganization/blabla_agency/actions/workflows/verification-monitor.yml>
-- Общий шаблон GitHub Pages для любого зеркала: `https://<owner>.github.io/blabla_agency/`
-- Общий шаблон PDF для любого зеркала: `https://<owner>.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf`
+Ключевой момент в том, что записанный контекст не считается побочным следом встреч. Записи, транскрипты, чат-треды, комментарии в issues, deployment-трейсы и текущая версия демо входят в рабочую память, которая наполняет следующий AI-проход генерации.
 
-Эти ссылки начнут работать после первой успешной сборки GitHub Actions и деплоя GitHub Pages.
+### Канонический деплой организации
+
+- Сайт: <https://realagiorganization.github.io/blabla_agency/>
+- Storybook: <https://realagiorganization.github.io/blabla_agency/storybook/>
+- Актуальный PDF презентации: <https://realagiorganization.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
+- Workflow сборки и деплоя: <https://github.com/realagiorganization/blabla_agency/actions/workflows/presentation.yml>
+- Workflow живой верификации: <https://github.com/realagiorganization/blabla_agency/actions/workflows/verification-monitor.yml>
+- Репозиторий организации: <https://github.com/realagiorganization/blabla_agency>
+
+### Персональное зеркало
+
+- Сайт: <https://adminrealagi.github.io/blabla_agency/>
+- Storybook: <https://adminrealagi.github.io/blabla_agency/storybook/>
+- Актуальный PDF презентации: <https://adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
+- Workflow сборки и деплоя: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml>
+- Workflow живой верификации: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml>
 
 ### Структура репозитория
 
-- `slides/` содержит исходник Beamer-презентации.
-- `docs/` содержит двуязычный Markdown-сайт.
-- `scripts/` содержит модульную локальную автоматизацию, используемую и людьми, и CI.
-- `.github/workflows/` содержит CI/CD для сборки PDF, сборки сайта, загрузки артефактов и деплоя на GitHub Pages.
+- `src/` содержит React-сайт для GitHub Pages и двуязычный нарратив агентства, собранный через переиспользуемые компоненты.
+- `.storybook/` содержит конфигурацию Storybook для покомпонентного ревью публикуемых UI-блоков.
+- `docs/` содержит двуязычную документацию репозитория, объясняющую cadence, логику спецификации, use case'ы и верификацию.
+- `slides/` содержит исходник двуязычной Beamer-презентации.
+- `scripts/` содержит общую локальную автоматизацию для lint, тестов, React-сборки, Storybook-сборки, PDF-сборки, staging, манифеста артефактов и живой верификации.
 
-### Локальная сборка
+### Локальный процесс
 
 ```bash
+make node
 make venv
-make pdf
-make site
-```
-
-### Локальная верификация и мониторинг
-
-```bash
-make content-policy
 make lint
+npm run test:run
 make verify
 make monitor
 ```
 
-`make content-policy` проверяет порядок двуязычных секций и безопасные для деплоя публичные ссылки. `make lint` проверяет форматирование Markdown, структуру YAML, синтаксис shell-скриптов и content policy. `make verify` пересобирает PDF и сайт, проверяет сгенерированные результаты и записывает манифест артефактов. `make monitor` проверяет последний результат workflow и живые URL сайта и PDF.
+- `make lint` проверяет Markdown, workflow YAML, shell-синтаксис, content policy и type safety React-сайта.
+- `npm run test:run` запускает тестовый набор React/Vitest.
+- `make verify` пересобирает PDF, запускает тесты, подготавливает React-сайт и Storybook, проверяет выходы и пишет манифест артефактов.
+- `make monitor` проверяет последний результат workflow и живые endpoint'ы сайта, Storybook и PDF.
 
 ### CI-конвейер
 
-- `presentation.yml` запускает поэтапные jobs для lint и build, использует pip cache, загружает артефакты PDF/сайта/манифеста и деплоит Pages на `master`.
-- `verification-monitor.yml` проверяет, что опубликованные сайт и PDF остаются доступными после деплоя.
+- `presentation.yml` собирает Beamer PDF, запускает React typecheck и тесты, собирает React-сайт, собирает Storybook, загружает артефакты и деплоит GitHub Pages.
+- `verification-monitor.yml` переиспользует monitor-скрипт репозитория, чтобы по расписанию и вручную проверять опубликованные сайт, Storybook и PDF.

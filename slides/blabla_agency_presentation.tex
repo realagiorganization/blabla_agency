@@ -17,7 +17,7 @@
 \setbeamertemplate{navigation symbols}{}
 
 \title{blabla agency}
-\subtitle{From raw conversations to a continuously delivered website\\От сырых разговоров к непрерывно поставляемому сайту}
+\subtitle{From moving technical discussion to deployed software\\От движущегося технического обсуждения к задеплоенному софту}
 \author{blabla agency}
 \date{\today}
 
@@ -44,170 +44,180 @@
 \end{frame}
 
 \BilingualFrame
-  {Core promise / Базовое обещание}
+  {Agency scope / Область агентства}
   {
     \begin{itemize}
-      \item blabla agency turns messy calls, recordings, chats, and files into a versioned public website.
-      \item The specification is extracted from the conversation instead of waiting for a perfect written brief.
-      \item Promotion and maintenance are built into the same delivery loop.
+      \item blabla agency builds systems, programs, websites, apps, automations, and software of any complexity.
+      \item The engagement starts from a draft technical specification instead of a perfectly written final brief.
+      \item The repository is both a delivery engine and a memory surface for the work.
     \end{itemize}
   }
   {
     \begin{itemize}
-      \item blabla agency превращает хаотичные звонки, записи, чаты и файлы в версионируемый публичный сайт.
-      \item Спецификация извлекается из разговора, а не ждет идеального письменного брифа.
-      \item Продвижение и поддержка встроены в тот же цикл поставки.
+      \item blabla agency делает системы, программы, сайты, приложения, автоматизации и софт любой сложности.
+      \item Работа начинается с черновой технической спецификации, а не с идеально написанного финального брифа.
+      \item Репозиторий одновременно является движком поставки и поверхностью памяти для работы.
     \end{itemize}
   }
-  {Repository docs: README.md, docs/specification.md}
+  {README.md, docs/index.md}
 
 \BilingualFrame
-  {What comes in / Что приходит на вход}
+  {Cadence / Cadence}
   {
     \begin{itemize}
-      \item Zoom workshops and sales calls
-      \item recorded video and audio conversations
-      \item chat exports and copied threads
-      \item dumped files, drafts, and loose notes
+      \item client sends a draft technical specification
+      \item the draft is discussed at length in calls, video calls, chats, comments, and reviews
+      \item AI generates and deploys a demo or staging version
+      \item feedback is collected on the real demo
+      \item the loop repeats
     \end{itemize}
   }
   {
     \begin{itemize}
-      \item Zoom-воркшопы и звонки по продажам
-      \item записанные видео- и аудиоразговоры
-      \item экспорт чатов и скопированные треды
-      \item выгруженные файлы, черновики и разрозненные заметки
+      \item клиент присылает черновую техническую спецификацию
+      \item черновик подробно обсуждается в звонках, видеозвонках, чатах, комментариях и ревью
+      \item AI генерирует и деплоит demo- или staging-версию
+      \item фидбек собирается по реальному демо
+      \item цикл повторяется
     \end{itemize}
   }
-  {The input can stay raw; the agency provides the structure.}
+  {docs/delivery-model.md}
 
 \BilingualFrame
-  {What gets extracted / Что извлекается}
+  {Where the real spec appears / Где появляется реальная спецификация}
   {
     \begin{itemize}
-      \item page goals and navigation
-      \item buyer language and objections
-      \item offers, proof, and case structure
-      \item delivery constraints and maintenance priorities
+      \item not only in the original draft
+      \item in the recordings of discussions
+      \item in the current demo state
+      \item in issue comments and deployment traces
+      \item in the client reaction to what was actually shipped
     \end{itemize}
   }
   {
     \begin{itemize}
-      \item цели страниц и навигация
-      \item язык покупателя и возражения
-      \item предложения, proof и структура кейсов
-      \item ограничения поставки и приоритеты поддержки
+      \item не только в исходном черновике
+      \item в записях обсуждений
+      \item в текущем состоянии демо
+      \item в комментариях к issues и deployment-трейсах
+      \item в реакции клиента на реально поставленное
     \end{itemize}
   }
-  {See docs/specification.md for the translation layer.}
+  {docs/specification.md}
 
 \BilingualFrame
-  {Continuous delivery loop / Цикл непрерывной поставки}
+  {Recorded context / Записанный контекст}
   {
     \begin{itemize}
-      \item capture new conversations
-      \item distill decisions into the specification
-      \item publish website and presentation updates
-      \item keep everything versioned in git
+      \item call and video call recordings
+      \item transcripts and summary notes
+      \item chat exports and inline comments
+      \item current demo or staging behavior
+      \item deployment notes and failures
     \end{itemize}
   }
   {
     \begin{itemize}
-      \item собирать новые разговоры
-      \item дистиллировать решения в спецификацию
-      \item публиковать обновления сайта и презентации
-      \item хранить все в git с версиями
+      \item записи звонков и видеозвонков
+      \item транскрипты и summary-заметки
+      \item выгрузки чатов и inline-комментарии
+      \item текущее поведение демо или staging
+      \item deployment-заметки и сбои
     \end{itemize}
   }
-  {The website becomes the latest agreed business state.}
+  {This recorded state populates the AI generation context.}
 
 \BilingualFrame
-  {Website outputs / Выходы сайта}
+  {Why the AI output improves / Почему AI-выход улучшается}
   {
     \begin{itemize}
-      \item homepage and positioning
-      \item offer and capability pages
-      \item proof blocks, FAQ, and case studies
-      \item narrative assets ready for promotion
+      \item each iteration sees more real decisions
+      \item each new demo reduces ambiguity
+      \item each failure or objection gets captured
+      \item the context ledger keeps the next pass grounded in reality
     \end{itemize}
   }
   {
     \begin{itemize}
-      \item главная страница и позиционирование
-      \item страницы предложения и capability-страницы
-      \item proof-блоки, FAQ и case study
-      \item narrative-артефакты, готовые к продвижению
+      \item каждая итерация видит больше реальных решений
+      \item каждое новое демо снижает неоднозначность
+      \item каждый сбой или objection фиксируется
+      \item реестр контекста удерживает следующий проход в реальности
     \end{itemize}
   }
-  {The same source material feeds both delivery and promotion.}
+  {The AI agents generate from recorded memory, not from guesswork.}
+
+\BilingualFrame
+  {Client-visible outputs / Выходы, видимые клиенту}
+  {
+    \begin{itemize}
+      \item deployable demos and staging versions
+      \item versioned specification updates
+      \item public-facing website or app surfaces
+      \item reusable component review through Storybook
+      \item PDF presentation and linked repo artifacts
+    \end{itemize}
+  }
+  {
+    \begin{itemize}
+      \item deployable demo и staging-версии
+      \item версионируемые обновления спецификации
+      \item публичные поверхности сайта или приложения
+      \item ревью переиспользуемых компонентов через Storybook
+      \item PDF-презентация и связанные артефакты репозитория
+    \end{itemize}
+  }
+  {README.md, docs/verification.md}
 
 \BilingualFrame
   {Use cases / Use case'ы}
   {
     \begin{itemize}
-      \item SaaS founders shaping a public story from demos and interviews
-      \item industrial suppliers modernizing fragmented technical collateral
-      \item expert-led agencies selling through calls instead of polished decks
-      \item teams that need weekly stakeholder alignment reflected on the site
+      \item internal operating systems
+      \item automation-heavy service programs
+      \item websites plus protected application surfaces
+      \item high-complexity technical products that keep changing through demos
     \end{itemize}
   }
   {
     \begin{itemize}
-      \item SaaS-фаундеры, собирающие публичную историю из демо и интервью
-      \item индустриальные поставщики, модернизирующие разрозненный технический collateral
-      \item экспертные агентства, продающие через звонки, а не через отполированные deck'и
-      \item команды, которым нужно отражать еженедельное выравнивание стейкхолдеров на сайте
+      \item внутренние операционные системы
+      \item сервисные программы с тяжелой автоматизацией
+      \item сайты плюс закрытые прикладные поверхности
+      \item технические продукты высокой сложности, которые меняются через демо
     \end{itemize}
   }
-  {Detailed examples live in docs/use-cases.md.}
-
-\BilingualFrame
-  {Promotion plus maintenance / Продвижение плюс поддержка}
-  {
-    \begin{itemize}
-      \item every conversation can refine the offer
-      \item every refined offer can update the public site
-      \item every update stays traceable through version control
-      \item the site does not drift away from the real business
-    \end{itemize}
-  }
-  {
-    \begin{itemize}
-      \item каждый разговор может уточнить предложение
-      \item каждое уточнение может обновить публичный сайт
-      \item каждое обновление остается прослеживаемым через version control
-      \item сайт не отрывается от реального бизнеса
-    \end{itemize}
-  }
-  {This is a maintained publishing system, not a one-off brochure.}
+  {docs/use-cases.md}
 
 \BilingualFrame
   {Repository outputs / Выходы репозитория}
   {
     \begin{itemize}
+      \item React GitHub Pages site in \texttt{src/}
+      \item Storybook component review under \texttt{/storybook/}
       \item Beamer presentation in \texttt{slides/}
-      \item Markdown site in \texttt{docs/}
-      \item GitHub Actions for PDF artifacts and Pages deployment
-      \item README links for the latest public outputs
+      \item GitHub Actions for build, deploy, artifacts, and monitoring
     \end{itemize}
   }
   {
     \begin{itemize}
+      \item React-сайт на GitHub Pages в \texttt{src/}
+      \item Storybook-ревью компонентов по адресу \texttt{/storybook/}
       \item Beamer-презентация в \texttt{slides/}
-      \item Markdown-сайт в \texttt{docs/}
-      \item GitHub Actions для PDF-артефактов и деплоя на Pages
-      \item ссылки в README на последние публичные выходы
+      \item GitHub Actions для сборки, деплоя, артефактов и мониторинга
     \end{itemize}
   }
-  {CI/CD keeps the presentation and site continuously publishable.}
+  {The repo is a delivery product, not just a source dump.}
 
-\begin{frame}{Contact surface / Поверхность контакта}
+\begin{frame}{Public surfaces / Публичные поверхности}
   \small
   \begin{itemize}
-    \item English: The repository is ready to publish from either a personal or organization GitHub Pages mirror without changing the source content.
-    \item Русский: Репозиторий готов публиковаться как из персонального, так и из организационного зеркала GitHub Pages без изменения исходного контента.
-    \item GitHub Pages pattern: \url{https://OWNER.github.io/blabla_agency/}
-    \item Latest PDF pattern: \url{https://OWNER.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf}
+    \item English: The canonical public deployment is the organization GitHub Pages site plus Storybook and PDF artifacts.
+    \item Русский: Канонический публичный деплой - это GitHub Pages организации плюс Storybook и PDF-артефакты.
+    \item Organization repo: \url{https://github.com/realagiorganization/blabla_agency}
+    \item Pages pattern: \url{https://OWNER.github.io/blabla_agency/}
+    \item Storybook pattern: \url{https://OWNER.github.io/blabla_agency/storybook/}
+    \item PDF pattern: \url{https://OWNER.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf}
   \end{itemize}
 \end{frame}
 

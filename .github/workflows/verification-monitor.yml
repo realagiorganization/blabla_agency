@@ -19,7 +19,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6.0.2
 
-      - name: Verify deployed site and PDF
+      - name: Verify deployed site, Storybook, and PDF
         env:
           MONITOR_OUTPUT_DIR: verification
         run: |

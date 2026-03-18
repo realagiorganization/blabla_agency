@@ -60,6 +60,7 @@ def require_readme_links(path: Path, slugs: list[str], errors: list[str]) -> Non
         owner_lower = owner.lower()
         expected_links = [
             f"https://{owner_lower}.github.io/{repo}/",
+            f"https://{owner_lower}.github.io/{repo}/storybook/",
             f"https://{owner_lower}.github.io/{repo}/artifacts/blabla_agency_presentation.pdf",
             f"https://github.com/{owner}/{repo}/actions/workflows/presentation.yml",
             f"https://github.com/{owner}/{repo}/actions/workflows/verification-monitor.yml",

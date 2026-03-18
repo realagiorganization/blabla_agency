@@ -6,6 +6,7 @@ source "$script_dir/common.sh"
 
 root="$(repo_root)"
 ensure_venv
+ensure_node_modules
 
 cd "$root"
 
@@ -14,6 +15,11 @@ if [[ ! -f build/blabla_agency_presentation.pdf ]]; then
   exit 1
 fi
 
-PATH="$root/.venv/bin:$PATH" mkdocs build --strict --site-dir site
-mkdir -p site/artifacts
+npm run build
+npm run build-storybook
+
+rm -rf site
+mkdir -p site/artifacts site/storybook
+cp -R dist/. site/
+cp -R storybook-static/. site/storybook/
 cp build/blabla_agency_presentation.pdf site/artifacts/blabla_agency_presentation.pdf

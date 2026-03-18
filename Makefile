@@ -1,11 +1,14 @@
 SHELL := /bin/bash
 
-.PHONY: deps venv content-policy lint pdf site artifacts verify ci monitor clean
+.PHONY: deps venv node content-policy lint pdf site artifacts verify ci monitor clean
 
-deps: venv
+deps: venv node
 
 venv:
 	./scripts/setup_venv.sh
+
+node:
+	./scripts/setup_node.sh
 
 content-policy:
 	./scripts/setup_venv.sh
@@ -32,4 +35,4 @@ monitor:
 	./scripts/monitor_verification.sh
 
 clean:
-	rm -rf artifacts build site
+	rm -rf artifacts build dist site storybook-static

@@ -15,6 +15,7 @@ fi
 WORKFLOW_FILE="${2:-presentation.yml}"
 SITE_URL="${3:-$(pages_base_url_from_repo "$REPO")}"
 PDF_URL="${4:-${SITE_URL}artifacts/blabla_agency_presentation.pdf}"
+STORYBOOK_URL="${5:-${SITE_URL}storybook/}"
 
 require_command gh
 require_command jq
@@ -36,6 +37,7 @@ run_url="$(echo "$latest_run_json" | jq -r '.[0].url')"
 
 site_status="$(curl -L -s -o /dev/null -w '%{http_code}' "$SITE_URL")"
 pdf_status="$(curl -L -s -o /dev/null -w '%{http_code}' "$PDF_URL")"
+storybook_status="$(curl -L -s -o /dev/null -w '%{http_code}' "$STORYBOOK_URL")"
 
 summary="$(
   cat <<EOF
@@ -53,6 +55,8 @@ summary="$(
 - Site status: \`$site_status\`
 - PDF URL: $PDF_URL
 - PDF status: \`$pdf_status\`
+- Storybook URL: $STORYBOOK_URL
+- Storybook status: \`$storybook_status\`
 EOF
 )"
 
@@ -68,6 +72,6 @@ if [[ "$run_status" != "completed" || "$run_conclusion" != "success" ]]; then
   exit 1
 fi
 
-if [[ "$site_status" != "200" || "$pdf_status" != "200" ]]; then
+if [[ "$site_status" != "200" || "$pdf_status" != "200" || "$storybook_status" != "200" ]]; then
   exit 1
 fi

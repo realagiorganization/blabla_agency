@@ -53,3 +53,27 @@ ensure_venv() {
     touch "$stamp"
   fi
 }
+
+ensure_node_modules() {
+  local root stamp
+  root="$(repo_root)"
+  stamp="$root/.node_modules_stamp"
+
+  require_command npm
+
+  if [[ ! -f "$root/package.json" ]]; then
+    echo "package.json is required for the React site toolchain." >&2
+    exit 1
+  fi
+
+  cd "$root"
+
+  if [[ ! -d "$root/node_modules" || ! -f "$stamp" || "$root/package.json" -nt "$stamp" || "$root/package-lock.json" -nt "$stamp" ]]; then
+    if [[ -n "${CI:-}" && -f "$root/package-lock.json" ]]; then
+      npm ci
+    else
+      npm install
+    fi
+    touch "$stamp"
+  fi
+}
