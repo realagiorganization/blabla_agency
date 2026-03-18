@@ -17,6 +17,7 @@ nav:
   - Specification: specification.md
   - Use Cases: use-cases.md
   - Delivery Model: delivery-model.md
+  - Verification: verification.md
 
 markdown_extensions:
   - admonition

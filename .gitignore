@@ -14,6 +14,8 @@
 !.github/workflows/**
 !docs/
 !docs/**
+!scripts/
+!scripts/**
 !slides/
 !slides/**
 !.codex/

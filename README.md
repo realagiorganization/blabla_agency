@@ -1,6 +1,7 @@
 # blabla agency
 
 [![Build and deploy presentation](https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml/badge.svg)](https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml)
+[![Monitor live deployment](https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml/badge.svg)](https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml)
 
 ## English
 
@@ -13,6 +14,7 @@ The operating promise is straightforward: no matter how raw the source material 
 - Website: <https://Adminrealagi.github.io/blabla_agency/>
 - Latest presentation PDF: <https://Adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
 - Workflow runs and downloadable CI artifacts: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml>
+- Live verification monitor: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml>
 
 These links become live after the first successful GitHub Actions build and GitHub Pages deployment.
 
@@ -30,6 +32,15 @@ make pdf
 make site
 ```
 
+### Local verification and monitoring
+
+```bash
+make verify
+make monitor
+```
+
+`make verify` rebuilds the PDF and site in a local virtual environment. `make monitor` checks the latest workflow result plus the live site and PDF URLs.
+
 ## Русский
 
 Этот репозиторий представляет собой двуязычный LaTeX + Markdown каркас публикации для **blabla agency**: AI-агентства, которое превращает разговоры в Zoom, записанные видео- и аудиобеседы, чаты и выгруженные файлы в непрерывно версионируемый сайт, развивающуюся спецификацию, связанные use case'ы и Beamer-презентацию.
@@ -41,6 +52,7 @@ make site
 - Сайт: <https://Adminrealagi.github.io/blabla_agency/>
 - Актуальный PDF презентации: <https://Adminrealagi.github.io/blabla_agency/artifacts/blabla_agency_presentation.pdf>
 - Запуски workflow и скачиваемые CI-артефакты: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/presentation.yml>
+- Workflow мониторинга живой публикации: <https://github.com/Adminrealagi/blabla_agency/actions/workflows/verification-monitor.yml>
 
 Эти ссылки начнут работать после первой успешной сборки GitHub Actions и деплоя GitHub Pages.
 
@@ -57,3 +69,12 @@ python -m pip install -r requirements-docs.txt
 make pdf
 make site
 ```
+
+### Локальная верификация и мониторинг
+
+```bash
+make verify
+make monitor
+```
+
+`make verify` пересобирает PDF и сайт в локальном virtual environment. `make monitor` проверяет последний результат workflow и живые URL сайта и PDF.

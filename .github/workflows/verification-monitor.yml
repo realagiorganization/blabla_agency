@@ -1,0 +1,47 @@
+name: Monitor Live Verification
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  monitor-live:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify deployed site and PDF
+        env:
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          owner_lower="$(printf '%s' "$REPO_OWNER" | tr '[:upper:]' '[:lower:]')"
+          SITE_URL="https://${owner_lower}.github.io/${REPO_NAME}/"
+          PDF_URL="${SITE_URL}artifacts/blabla_agency_presentation.pdf"
+          mkdir -p verification
+          site_status="$(curl -L -s -o verification/site.html -w '%{http_code}' "$SITE_URL")"
+          pdf_status="$(curl -L -s -o verification/blabla_agency_presentation.pdf -w '%{http_code}' "$PDF_URL")"
+
+          {
+            echo "# Live verification summary"
+            echo
+            echo "- Site URL: $SITE_URL"
+            echo "- Site status: $site_status"
+            echo "- PDF URL: $PDF_URL"
+            echo "- PDF status: $pdf_status"
+          } | tee verification/summary.md >> "$GITHUB_STEP_SUMMARY"
+
+          test "$site_status" = "200"
+          test "$pdf_status" = "200"
+
+      - name: Upload verification summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-verification-summary
+          path: verification/
