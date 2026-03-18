@@ -10,6 +10,7 @@ describe("App", () => {
         name: /blabla agency turns evolving discussions into deployed software/i,
       }),
     ).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /open ad script/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /open storybook/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /open pdf/i })).toBeInTheDocument();
   });

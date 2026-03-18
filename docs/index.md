@@ -17,11 +17,16 @@
 - a React GitHub Pages site for the agency narrative
 - a Storybook build for reusable component review
 - a bilingual Beamer presentation
+- a Fountain-style markdown screenplay/manual that stages the agency workflow through Zoom, ChatGPT, and VS Code
 - repository docs explaining cadence, specification logic, and verification
 
 ### Why recorded context matters
 
 The AI pipeline does not rely on a static written brief alone. It uses the recorded memory of the project: calls, transcripts, chat threads, issue comments, deployment notes, and the visible state of the current demo.
+
+### Script asset
+
+- `../public/agency_advertisement_scenario.fountain.md`
 
 ## Русский
 
@@ -40,8 +45,13 @@ The AI pipeline does not rely on a static written brief alone. It uses the recor
 - React-сайт на GitHub Pages для нарратива агентства
 - Storybook-сборку для ревью переиспользуемых компонентов
 - двуязычную Beamer-презентацию
+- Fountain-style markdown screenplay/manual, который разыгрывает workflow агентства через Zoom, ChatGPT и VS Code
 - документацию репозитория, объясняющую cadence, логику спецификации и верификацию
 
 ### Почему записанный контекст важен
 
 AI-конвейер не опирается только на статический письменный бриф. Он использует записанную память проекта: звонки, транскрипты, чат-треды, комментарии в issues, заметки о деплое и видимое состояние текущего демо.
+
+### Сценарный артефакт
+
+- `../public/agency_advertisement_scenario.fountain.md`

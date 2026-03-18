@@ -34,10 +34,15 @@ The key point is that recorded context is not treated as meeting residue. Record
 ### Repository layout
 
 - `src/` contains the React GitHub Pages site and the bilingual agency narrative rendered through reusable components.
+- `public/` contains published static assets, including the Fountain-style advertisement screenplay/manual for the agency workflow.
 - `.storybook/` contains Storybook configuration for component-level review of the published UI building blocks.
 - `docs/` contains bilingual repository documentation that explains cadence, specification logic, use cases, and verification.
 - `slides/` contains the bilingual Beamer presentation source.
 - `scripts/` contains shared local automation for linting, tests, React builds, Storybook builds, PDF builds, staging, artifact manifests, and live verification.
+
+### Published screenplay/manual
+
+- Fountain screenplay/manual: `public/agency_advertisement_scenario.fountain.md`
 
 ### Local workflow
 
@@ -94,10 +99,15 @@ make monitor
 ### Структура репозитория
 
 - `src/` содержит React-сайт для GitHub Pages и двуязычный нарратив агентства, собранный через переиспользуемые компоненты.
+- `public/` содержит публикуемые статические артефакты, включая Fountain-style рекламный screenplay/manual о рабочем процессе агентства.
 - `.storybook/` содержит конфигурацию Storybook для покомпонентного ревью публикуемых UI-блоков.
 - `docs/` содержит двуязычную документацию репозитория, объясняющую cadence, логику спецификации, use case'ы и верификацию.
 - `slides/` содержит исходник двуязычной Beamer-презентации.
 - `scripts/` содержит общую локальную автоматизацию для lint, тестов, React-сборки, Storybook-сборки, PDF-сборки, staging, манифеста артефактов и живой верификации.
+
+### Опубликованный screenplay/manual
+
+- Fountain screenplay/manual: `public/agency_advertisement_scenario.fountain.md`
 
 ### Локальный процесс
 

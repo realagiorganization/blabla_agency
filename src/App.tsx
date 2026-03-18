@@ -24,6 +24,7 @@ function App() {
           <a href="#cadence">Cadence</a>
           <a href="#context">Context</a>
           <a href="#deliverables">Deliverables</a>
+          <a href="./agency_advertisement_scenario.fountain.md">Ad Script</a>
           <a href="./storybook/">Storybook</a>
           <a href="./artifacts/blabla_agency_presentation.pdf">Presentation PDF</a>
         </nav>
@@ -36,6 +37,9 @@ function App() {
             <p className="hero-title-ru">{hero.title.ru}</p>
             <BilingualPanel english={hero.summary.en} russian={hero.summary.ru} />
             <div className="cta-row">
+              <a className="secondary-button" href="./agency_advertisement_scenario.fountain.md">
+                Open Ad Script
+              </a>
               <a className="primary-button" href="./storybook/">
                 Open Storybook
               </a>
@@ -159,6 +163,7 @@ function App() {
       <footer className="footer">
         <p>Storybook-tested React site. GitHub Pages deploy. PDF presentation artifact. Bilingual narrative.</p>
         <p>
+          <a href="./agency_advertisement_scenario.fountain.md">Ad Script</a>
           <a href="./storybook/">Storybook</a>
           <a href="./artifacts/blabla_agency_presentation.pdf">Presentation PDF</a>
           <a href="https://github.com/realagiorganization/blabla_agency">GitHub</a>

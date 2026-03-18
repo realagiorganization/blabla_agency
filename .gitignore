@@ -16,6 +16,8 @@
 !tsconfig.json
 !vite.config.ts
 !vitest.config.ts
+!public/
+!public/**
 !.github/
 !.github/workflows/
 !.github/workflows/**
