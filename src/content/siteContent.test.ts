@@ -1,12 +1,19 @@
 import {
   cadence,
+  cadenceExplorerFrames,
   capabilities,
   contextSources,
   deliverables,
   endeavorTracks,
+  footerCopy,
+  footerLinks,
   hero,
+  heroLinks,
   metrics,
+  navigationLinks,
   recordedContextCallout,
+  repositorySources,
+  sectionCopy,
 } from "./siteContent";
 
 function collectEmptyBilingualFields(value: unknown, path = "root"): string[] {
@@ -36,22 +43,40 @@ describe("site content", () => {
   it("keeps bilingual fields populated", () => {
     const issues = collectEmptyBilingualFields({
       hero,
+      heroLinks,
+      navigationLinks,
+      sectionCopy,
       metrics,
       capabilities,
       endeavorTracks,
+      repositorySources,
       cadence,
+      cadenceExplorerFrames,
       contextSources,
       deliverables,
       recordedContextCallout,
+      footerCopy,
+      footerLinks,
     });
 
     expect(issues).toEqual([]);
   });
 
-  it("defines the full cadence and context set", () => {
+  it("defines the full cadence, repo sources, and public outputs", () => {
     expect(cadence).toHaveLength(5);
+    expect(cadenceExplorerFrames).toHaveLength(5);
     expect(endeavorTracks).toHaveLength(4);
+    expect(repositorySources).toHaveLength(7);
     expect(contextSources.length).toBeGreaterThanOrEqual(5);
-    expect(deliverables.length).toBeGreaterThanOrEqual(4);
+    expect(deliverables).toHaveLength(5);
+    expect(Object.keys(sectionCopy)).toEqual([
+      "endeavor",
+      "sources",
+      "surfaces",
+      "cadence",
+      "diagrams",
+      "context",
+      "deliverables",
+    ]);
   });
 });

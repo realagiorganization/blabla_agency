@@ -1,21 +1,30 @@
 import {
   cadence,
+  cadenceExplorerFrames,
   capabilities,
   contextDiagram,
   contextSources,
   deliverables,
   deliverDiagram,
   endeavorTracks,
+  footerCopy,
+  footerLinks,
   hero,
+  heroLinks,
   metrics,
+  navigationLinks,
   recordedContextCallout,
+  repositorySources,
+  sectionCopy,
 } from "./content/siteContent";
 import { BilingualPanel } from "./components/BilingualPanel";
+import { CadenceExplorer } from "./components/CadenceExplorer";
 import { CadenceStepCard } from "./components/CadenceStepCard";
 import { ContextSourceCard } from "./components/ContextSourceCard";
 import { EndeavorTrackCard } from "./components/EndeavorTrackCard";
 import { MermaidDiagram } from "./components/MermaidDiagram";
 import { PipelineClipArt } from "./components/PipelineClipArt";
+import { RepositorySourceCard } from "./components/RepositorySourceCard";
 import { SectionHeading } from "./components/SectionHeading";
 
 function App() {
@@ -23,13 +32,19 @@ function App() {
     <div className="page-shell">
       <header className="hero">
         <nav className="topbar">
-          <a href="#endeavor">Endeavor</a>
-          <a href="#cadence">Cadence</a>
-          <a href="#context">Context</a>
-          <a href="#deliverables">Deliverables</a>
-          <a href="./agency_advertisement_scenario.fountain.md">Ad Script</a>
-          <a href="./storybook/">Storybook</a>
-          <a href="./artifacts/blabla_agency_presentation.pdf">Presentation PDF</a>
+          {navigationLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              rel={link.external ? "noreferrer" : undefined}
+              target={link.external ? "_blank" : undefined}
+            >
+              <span className="link-stack">
+                <span>{link.label.en}</span>
+                <span className="link-stack-ru">{link.label.ru}</span>
+              </span>
+            </a>
+          ))}
         </nav>
 
         <div className="hero-grid">
@@ -40,23 +55,20 @@ function App() {
             <p className="hero-title-ru">{hero.title.ru}</p>
             <BilingualPanel english={hero.summary.en} russian={hero.summary.ru} />
             <div className="cta-row">
-              <a className="secondary-button" href="./agency_advertisement_scenario.fountain.md">
-                Open Ad Script
-              </a>
-              <a className="primary-button" href="./storybook/">
-                Open Storybook
-              </a>
-              <a className="secondary-button" href="./artifacts/blabla_agency_presentation.pdf">
-                Open PDF
-              </a>
-              <a
-                className="secondary-button"
-                href="https://github.com/realagiorganization/blabla_agency"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Organization Repo
-              </a>
+              {heroLinks.map((link) => (
+                <a
+                  key={link.href}
+                  className={link.tone === "primary" ? "primary-button" : "secondary-button"}
+                  href={link.href}
+                  rel={link.external ? "noreferrer" : undefined}
+                  target={link.external ? "_blank" : undefined}
+                >
+                  <span className="link-stack button-stack">
+                    <span>{link.label.en}</span>
+                    <span className="link-stack-ru button-stack-ru">{link.label.ru}</span>
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
           <PipelineClipArt />
@@ -64,7 +76,7 @@ function App() {
 
         <section className="metric-strip" aria-label="Key operating signals">
           {metrics.map((metric) => (
-            <article key={metric.value} className="metric-card">
+            <article key={metric.value + metric.label.en} className="metric-card">
               <span className="metric-value">{metric.value}</span>
               <span className="metric-label-en">{metric.label.en}</span>
               <span className="metric-label-ru">{metric.label.ru}</span>
@@ -76,9 +88,10 @@ function App() {
       <main>
         <section className="content-section" id="endeavor">
           <SectionHeading
-            eyebrow="Endeavor"
-            title="This repository is the public, versioned, and continuously built surface of the agency effort."
-            description="The endeavor is not hidden behind private notes. It is explained in markdown, rendered through reusable React components, reviewed in Storybook, deployed on GitHub Pages, and checked through build plus live monitor workflows."
+            eyebrow={sectionCopy.endeavor.eyebrow}
+            title={sectionCopy.endeavor.title}
+            description={sectionCopy.endeavor.description}
+            sources={sectionCopy.endeavor.sources}
           />
           <div className="grid-two">
             {endeavorTracks.map((track) => (
@@ -87,11 +100,26 @@ function App() {
           </div>
         </section>
 
+        <section className="content-section" id="sources">
+          <SectionHeading
+            eyebrow={sectionCopy.sources.eyebrow}
+            title={sectionCopy.sources.title}
+            description={sectionCopy.sources.description}
+            sources={sectionCopy.sources.sources}
+          />
+          <div className="grid-two">
+            {repositorySources.map((source) => (
+              <RepositorySourceCard key={source.filePath} source={source} />
+            ))}
+          </div>
+        </section>
+
         <section className="content-section" id="surfaces">
           <SectionHeading
-            eyebrow="Service surface"
-            title="The agency handles both product-facing and internal engineering work."
-            description="The same cadence can move through software of any complexity, because the spec is treated as a living conversation instead of a frozen intake form."
+            eyebrow={sectionCopy.surfaces.eyebrow}
+            title={sectionCopy.surfaces.title}
+            description={sectionCopy.surfaces.description}
+            sources={sectionCopy.surfaces.sources}
           />
           <div className="grid-two">
             {capabilities.map((capability) => (
@@ -106,10 +134,12 @@ function App() {
 
         <section className="content-section" id="cadence">
           <SectionHeading
-            eyebrow="Cadence"
-            title="Draft spec first. Long discussion second. Deployed demo third."
-            description="That is the core operating loop: a client sends a draft, the draft is argued through at length, the AI pipeline generates and deploys, and the next discussion starts from the real demo instead of a theoretical document."
+            eyebrow={sectionCopy.cadence.eyebrow}
+            title={sectionCopy.cadence.title}
+            description={sectionCopy.cadence.description}
+            sources={sectionCopy.cadence.sources}
           />
+          <CadenceExplorer frames={cadenceExplorerFrames} />
           <div className="step-grid">
             {cadence.map((step) => (
               <CadenceStepCard key={step.label} step={step} />
@@ -119,9 +149,10 @@ function App() {
 
         <section className="content-section diagrams-section" id="diagrams">
           <SectionHeading
-            eyebrow="Mermaid maps"
-            title="Recorded discussion is the fuel, not just a project archive."
-            description="The diagrams below show how conversation context, demo state, and deployment traces are folded into an AI context ledger that drives each generation pass."
+            eyebrow={sectionCopy.diagrams.eyebrow}
+            title={sectionCopy.diagrams.title}
+            description={sectionCopy.diagrams.description}
+            sources={sectionCopy.diagrams.sources}
           />
           <div className="diagram-grid">
             <MermaidDiagram
@@ -139,9 +170,10 @@ function App() {
 
         <section className="content-section" id="context">
           <SectionHeading
-            eyebrow="Context ledger"
-            title="The AI pipeline generates from recorded reality, not from hand-waved summaries."
-            description="Calls, chats, comments, the current demo version, and deployment traces are all part of what the agent sees. The richer the record, the sharper the next generation pass."
+            eyebrow={sectionCopy.context.eyebrow}
+            title={sectionCopy.context.title}
+            description={sectionCopy.context.description}
+            sources={sectionCopy.context.sources}
           />
           <div className="context-layout">
             <div className="context-callout">
@@ -160,9 +192,10 @@ function App() {
 
         <section className="content-section" id="deliverables">
           <SectionHeading
-            eyebrow="Visible outputs"
-            title="Every iteration leaves behind client-readable, machine-readable, and deployable artifacts."
-            description="This is why the process scales: the repo stores the latest explanations, the latest demo, the latest presentation, and the latest storybook components that describe the evolving service."
+            eyebrow={sectionCopy.deliverables.eyebrow}
+            title={sectionCopy.deliverables.title}
+            description={sectionCopy.deliverables.description}
+            sources={sectionCopy.deliverables.sources}
           />
           <div className="deliverable-grid">
             {deliverables.map((deliverable) => (
@@ -170,6 +203,24 @@ function App() {
                 <h3>{deliverable.title.en}</h3>
                 <p className="surface-title-ru">{deliverable.title.ru}</p>
                 <BilingualPanel english={deliverable.body.en} russian={deliverable.body.ru} />
+                <p className="deliverable-source">
+                  <span>Source / Источник</span>
+                  <code>{deliverable.sourcePath}</code>
+                </p>
+                <div className="link-row">
+                  {deliverable.links.map((link) => (
+                    <a
+                      key={link.href}
+                      className="resource-link"
+                      href={link.href}
+                      rel={link.external ? "noreferrer" : undefined}
+                      target={link.external ? "_blank" : undefined}
+                    >
+                      <span>{link.label.en}</span>
+                      <span className="resource-link-ru">{link.label.ru}</span>
+                    </a>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
@@ -177,12 +228,24 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Storybook-tested React site. GitHub Pages deploy. PDF presentation artifact. Bilingual narrative.</p>
+        <div className="footer-copy">
+          <p>{footerCopy.en}</p>
+          <p className="surface-title-ru">{footerCopy.ru}</p>
+        </div>
         <p>
-          <a href="./agency_advertisement_scenario.fountain.md">Ad Script</a>
-          <a href="./storybook/">Storybook</a>
-          <a href="./artifacts/blabla_agency_presentation.pdf">Presentation PDF</a>
-          <a href="https://github.com/realagiorganization/blabla_agency">GitHub</a>
+          {footerLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              rel={link.external ? "noreferrer" : undefined}
+              target={link.external ? "_blank" : undefined}
+            >
+              <span className="link-stack">
+                <span>{link.label.en}</span>
+                <span className="link-stack-ru">{link.label.ru}</span>
+              </span>
+            </a>
+          ))}
         </p>
       </footer>
     </div>
