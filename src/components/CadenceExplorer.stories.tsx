@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { cadenceExplorerFrames } from "../content/siteContent";
+import { mockCadenceFrames } from "../content/mockSamples";
 import { CadenceExplorer } from "./CadenceExplorer";
 
 const meta = {
   title: "Cadence/CadenceExplorer",
   component: CadenceExplorer,
   args: {
-    frames: cadenceExplorerFrames,
+    frames: mockCadenceFrames,
   },
 } satisfies Meta<typeof CadenceExplorer>;
 

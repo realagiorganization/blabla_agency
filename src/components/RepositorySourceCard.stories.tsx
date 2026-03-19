@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { repositorySources } from "../content/siteContent";
+import { mockRepositorySourceSample } from "../content/mockSamples";
 import { RepositorySourceCard } from "./RepositorySourceCard";
 
 const meta = {
   title: "Repository/RepositorySourceCard",
   component: RepositorySourceCard,
   args: {
-    source: repositorySources[0],
+    source: mockRepositorySourceSample,
   },
 } satisfies Meta<typeof RepositorySourceCard>;
 

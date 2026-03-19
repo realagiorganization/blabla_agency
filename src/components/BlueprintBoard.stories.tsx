@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { blueprints } from "../content/siteContent";
+import { mockBlueprints } from "../content/mockSamples";
 import { BlueprintBoard } from "./BlueprintBoard";
 
 const meta = {
   title: "Blueprints/BlueprintBoard",
   component: BlueprintBoard,
   args: {
-    blueprints,
+    blueprints: mockBlueprints,
   },
 } satisfies Meta<typeof BlueprintBoard>;
 
