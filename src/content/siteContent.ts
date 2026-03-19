@@ -167,8 +167,8 @@ export const hero = {
     ru: "blabla agency превращает развивающиеся обсуждения в задеплоенный софт.",
   },
   summary: {
-    en: "The client starts with a draft technical specification. Then the real work happens in calls, video calls, chats, comments, and demo reviews. That recorded context becomes the working memory for an AI generation pipeline that ships deployable demos, collects feedback, and repeats until the product is production-ready.",
-    ru: "Клиент начинает с черновика технической спецификации. Дальше реальная работа происходит в звонках, видеозвонках, чатах, комментариях и разборах демо. Этот записанный контекст становится рабочей памятью AI-конвейера генерации, который поставляет задеплоенные демо, собирает обратную связь и повторяет цикл до production-ready результата.",
+    en: "The client starts with a rough spec. Calls, Zoom, chat, comments, and demo review fill the gaps. That recorded context plus the latest demo becomes AI working memory for the next deployed iteration.",
+    ru: "Клиент начинает с грубого ТЗ. Звонки, Zoom, чат, комментарии и ревью демо заполняют пробелы. Этот записанный контекст вместе с последним демо становится AI-памятью для следующей задеплоенной итерации.",
   },
 };
 
@@ -219,8 +219,8 @@ export const sectionCopy = {
       ru: "Этот репозиторий является публичной, версионируемой и непрерывно собираемой поверхностью агентского начинания.",
     },
     description: {
-      en: "The endeavor is not hidden behind private notes. It is explained in markdown, rendered through reusable React components, reviewed in Storybook, deployed on GitHub Pages, and checked through build plus live monitor workflows.",
-      ru: "Это начинание не скрыто в приватных заметках. Оно объясняется в markdown, рендерится через переиспользуемые React-компоненты, проверяется в Storybook, деплоится на GitHub Pages и контролируется через сборочные и live-monitor workflow.",
+      en: "The method stays public: explained in markdown, rendered with reusable React components, reviewed in Storybook, deployed on Pages, and checked by CI plus live monitors.",
+      ru: "Метод остается публичным: объясняется в markdown, рендерится переиспользуемыми React-компонентами, проверяется в Storybook, деплоится на Pages и контролируется CI плюс live-мониторами.",
     },
     sources: ["README.md", "docs/endeavor.md", "src/App.tsx"],
   },
@@ -234,8 +234,8 @@ export const sectionCopy = {
       ru: "Сайт объясняет себя через доказательства из репозитория, а не через общие заявления.",
     },
     description: {
-      en: "Each card below points to an actual file or public artifact in this repository. Together they document the agency model, the evolving specification logic, the verification surface, and the published materials that clients can inspect.",
-      ru: "Каждая карточка ниже указывает на реальный файл или публичный артефакт этого репозитория. Вместе они документируют модель агентства, логику эволюции спецификации, поверхность верификации и опубликованные материалы, которые клиент может проверить.",
+      en: "Each card below points to a real file or public artifact. Together they show the method, the spec logic, the sample shapes, and the verification surface.",
+      ru: "Каждая карточка ниже ведет к реальному файлу или публичному артефакту. Вместе они показывают метод, логику спецификации, формы примеров и поверхность верификации.",
     },
     sources: ["README.md", "docs/*.md", "public/agency_advertisement_scenario.fountain.md"],
   },
@@ -249,8 +249,8 @@ export const sectionCopy = {
       ru: "Агентство ведет и продуктовые, и внутренние инженерные работы любой сложности.",
     },
     description: {
-      en: "The same cadence can move from marketing sites to internal operating systems because the specification is treated as a living conversation rather than a frozen intake form.",
-      ru: "Один и тот же cadence может двигаться от маркетинговых сайтов до внутренних операционных систем, потому что спецификация рассматривается как живой разговор, а не как застывшая intake-форма.",
+      en: "The same cadence works from marketing surfaces to internal systems because the spec stays alive instead of freezing at intake.",
+      ru: "Один и тот же cadence работает от маркетинговых поверхностей до внутренних систем, потому что спецификация остается живой, а не замерзает на входе.",
     },
     sources: ["docs/use-cases.md", "docs/specification.md"],
   },
@@ -264,8 +264,8 @@ export const sectionCopy = {
       ru: "Разные формы проектов все равно проходят через один и тот же агентский цикл.",
     },
     description: {
-      en: "These blueprints are derived from the repository use cases. Switch between them to see what enters the context ledger, what the agency ships, and what public proof surfaces stay available to the client.",
-      ru: "Эти сценарии выведены из use case'ов репозитория. Переключайтесь между ними, чтобы увидеть, что входит в реестр контекста, что агентство поставляет и какие публичные proof-поверхности остаются доступными клиенту.",
+      en: "These blueprints come from the repo use cases. Switch between them to compare context inputs, shipped outputs, and public proof.",
+      ru: "Эти сценарии взяты из use case'ов репозитория. Переключайтесь между ними, чтобы сравнить входящий контекст, поставляемые выходы и публичное доказательство.",
     },
     sources: ["docs/use-cases.md", "docs/specification.md", "docs/verification.md"],
   },
@@ -279,8 +279,8 @@ export const sectionCopy = {
       ru: "Сначала черновик ТЗ. Потом длинное обсуждение. Затем задеплоенное демо.",
     },
     description: {
-      en: "That is the operating loop: a client sends a draft, the draft is argued through at length, the AI pipeline generates and deploys, and the next discussion starts from the real demo instead of a theoretical document.",
-      ru: "Так выглядит рабочий цикл: клиент присылает черновик, этот черновик подробно разбирается, AI-конвейер генерирует и деплоит, а следующее обсуждение стартует уже от реального демо, а не от теоретического документа.",
+      en: "A draft starts the loop, discussion sharpens it, the pipeline deploys, and the next conversation starts from the real demo.",
+      ru: "Черновик запускает цикл, обсуждение его точит, конвейер деплоит, а следующий разговор начинается уже от реального демо.",
     },
     sources: ["docs/delivery-model.md", "docs/specification.md"],
   },
@@ -294,8 +294,8 @@ export const sectionCopy = {
       ru: "Записанное обсуждение является топливом, а не просто архивом проекта.",
     },
     description: {
-      en: "The diagrams show how conversation context, demo state, and deployment traces are folded into an AI context ledger that drives each generation pass.",
-      ru: "Эти схемы показывают, как контекст разговоров, состояние демо и deployment-трейсы складываются в AI-реестр контекста, который ведет каждый проход генерации.",
+      en: "The diagrams show how conversation context, demo state, and deploy traces become the AI ledger for each generation pass.",
+      ru: "Схемы показывают, как контекст разговоров, состояние демо и deploy-трейсы становятся AI-реестром для каждого прохода генерации.",
     },
     sources: ["docs/specification.md", "slides/blabla_agency_presentation.tex"],
   },
@@ -309,8 +309,8 @@ export const sectionCopy = {
       ru: "AI-конвейер генерирует из записанной реальности, а не из расплывчатых пересказов.",
     },
     description: {
-      en: "Calls, chats, comments, the current demo version, and deployment traces are all part of what the agent sees. The richer the record, the sharper the next generation pass.",
-      ru: "Звонки, чаты, комментарии, текущая версия демо и deployment-трейсы входят в то, что видит агент. Чем богаче запись, тем точнее следующий проход генерации.",
+      en: "Calls, chats, comments, the current demo, and deploy traces are all part of what the agent sees. Better records make better iterations.",
+      ru: "Звонки, чаты, комментарии, текущее демо и deploy-трейсы входят в то, что видит агент. Чем лучше запись, тем лучше итерация.",
     },
     sources: ["docs/specification.md", "docs/use-cases.md"],
   },
@@ -324,8 +324,8 @@ export const sectionCopy = {
       ru: "Каждая итерация оставляет после себя клиентопонятные, машиночитаемые и деплоимые артефакты.",
     },
     description: {
-      en: "This is why the process scales: the repo always exposes the latest explanation, the latest demo surface, the latest presentation, the latest screenplay, and the workflows that publish and verify them.",
-      ru: "Именно поэтому процесс масштабируется: репозиторий всегда показывает последнее объяснение, последнюю демо-поверхность, последнюю презентацию, последний сценарий и workflow, которые публикуют и проверяют эти слои.",
+      en: "This is why the process scales: the repo keeps the latest explanation, demo surface, presentation, screenplay, and verification flow in one place.",
+      ru: "Именно поэтому процесс масштабируется: репозиторий держит в одном месте последнее объяснение, демо-поверхность, презентацию, сценарий и поток верификации.",
     },
     sources: [
       ".github/workflows/presentation.yml",
@@ -341,7 +341,7 @@ export const metrics: Metric[] = [
       en: "Bilingual markdown briefings in repo",
       ru: "Двуязычные markdown-брифинги в репозитории",
     },
-    value: "06",
+    value: "07",
   },
   {
     label: {
@@ -373,8 +373,8 @@ export const capabilities: Capability[] = [
       ru: "Кастомные системы",
     },
     body: {
-      en: "Internal tools, orchestration layers, ops panels, and business systems that become clearer only after operators walk through the work in detail.",
-      ru: "Внутренние инструменты, оркестрационные слои, операционные панели и бизнес-системы, которые проясняются только после того, как операторы подробно проходят реальный рабочий процесс.",
+      en: "Internal tools, orchestration layers, ops panels, and business systems that only become clear after operators walk through the work.",
+      ru: "Внутренние инструменты, оркестрационные слои, ops-панели и бизнес-системы, которые проясняются только после реального прохода работы с операторами.",
     },
   },
   {
@@ -383,8 +383,8 @@ export const capabilities: Capability[] = [
       ru: "Программы и автоматизации",
     },
     body: {
-      en: "CLI tools, service workers, data movers, parsers, agent workflows, and long-running automation stacks shaped by repeated discussion and demo evidence.",
-      ru: "CLI-инструменты, service workers, переносчики данных, парсеры, агентные workflow и долгоживущие стеки автоматизации, которые формируются через повторяющееся обсуждение и доказательства из демо.",
+      en: "CLI tools, workers, parsers, agent loops, and automation stacks shaped by repeated discussion and demo evidence.",
+      ru: "CLI-инструменты, workers, парсеры, агентные циклы и стеки автоматизации, которые формируются повторным обсуждением и доказательствами из демо.",
     },
   },
   {
@@ -393,8 +393,8 @@ export const capabilities: Capability[] = [
       ru: "Сайты и приложения",
     },
     body: {
-      en: "Marketing sites, product surfaces, dashboards, portals, and frontends that stay synchronized with the latest approved narrative and the latest deployable state.",
-      ru: "Маркетинговые сайты, продуктовые поверхности, дашборды, порталы и фронтенды, синхронизированные с последним утвержденным нарративом и последним деплоимым состоянием.",
+      en: "Marketing sites, product surfaces, dashboards, portals, and frontends kept in sync with the latest approved narrative and deployable state.",
+      ru: "Маркетинговые сайты, продуктовые поверхности, дашборды, порталы и фронтенды, синхронизированные с последним утвержденным нарративом и деплоимым состоянием.",
     },
   },
   {
@@ -403,8 +403,8 @@ export const capabilities: Capability[] = [
       ru: "Управление поставкой",
     },
     body: {
-      en: "Versioned specifications, recorded decisions, linked demo context, deployment notes, verification workflows, and AI-ready context packs.",
-      ru: "Версионируемые спецификации, записанные решения, связанный контекст демо, заметки по деплою, workflow верификации и AI-ready контекст-паки.",
+      en: "Versioned specs, recorded decisions, linked demo context, deploy notes, verification workflows, and AI-ready context packs.",
+      ru: "Версионируемые спецификации, записанные решения, связанный контекст демо, deploy-заметки, workflow верификации и AI-ready контекст-паки.",
     },
   },
 ];
@@ -635,8 +635,8 @@ export const endeavorTracks: EndeavorTrack[] = [
       ru: "Публичный репозиторий организации",
     },
     body: {
-      en: "The canonical remote is public because the agency surface itself is part of the deliverable. Clients can inspect how the narrative, components, and build workflows evolve over time.",
-      ru: "Канонический remote является публичным, потому что сама поверхность агентства является частью поставки. Клиенты могут видеть, как со временем развиваются нарратив, компоненты и workflow сборки.",
+      en: "The canonical remote is public because the agency surface is part of the deliverable. Clients can inspect how narrative, components, and workflows change over time.",
+      ru: "Канонический remote является публичным, потому что поверхность агентства входит в поставку. Клиенты могут видеть, как со временем меняются нарратив, компоненты и workflow.",
     },
     proofs: [
       {
@@ -659,8 +659,8 @@ export const endeavorTracks: EndeavorTrack[] = [
       ru: "Двуязычная поверхность бок о бок",
     },
     body: {
-      en: "English and Russian are presented together so the same service explanation can be read, reviewed, and compared without switching to a separate translated version.",
-      ru: "Английский и русский показываются вместе, чтобы одно и то же объяснение сервиса можно было читать, проверять и сопоставлять без переключения на отдельную переводную версию.",
+      en: "English and Russian stay together so the same explanation can be read and compared without switching to a separate translation.",
+      ru: "Английский и русский держатся рядом, чтобы одно и то же объяснение можно было читать и сравнивать без отдельной переводной версии.",
     },
     proofs: [
       {
@@ -683,8 +683,8 @@ export const endeavorTracks: EndeavorTrack[] = [
       ru: "Поверхность ревью через Storybook",
     },
     body: {
-      en: "The public site is built from reusable React blocks with isolated stories, so the explanation can evolve without turning the interface into an opaque one-off marketing page.",
-      ru: "Публичный сайт собирается из переиспользуемых React-блоков с изолированными story, поэтому объяснение может развиваться, не превращая интерфейс в непрозрачную одноразовую маркетинговую страницу.",
+      en: "The public site is built from reusable React blocks with isolated stories, so the explanation can evolve without turning into a one-off page.",
+      ru: "Публичный сайт собирается из переиспользуемых React-блоков с изолированными story, поэтому объяснение может развиваться без превращения в одноразовую страницу.",
     },
     proofs: [
       {
@@ -707,8 +707,8 @@ export const endeavorTracks: EndeavorTrack[] = [
       ru: "Публикация, подкрепленная верификацией",
     },
     body: {
-      en: "This repo does not only describe the agency. It rebuilds the site, Storybook, PDF, and screenplay, then verifies that the public endpoints are still reachable.",
-      ru: "Этот репозиторий не только описывает агентство. Он пересобирает сайт, Storybook, PDF и сценарий, а затем проверяет, что публичные endpoint'ы по-прежнему доступны.",
+      en: "This repo rebuilds the site, Storybook, PDF, and screenplay, then checks that the public endpoints still respond.",
+      ru: "Этот репозиторий пересобирает сайт, Storybook, PDF и сценарий, а затем проверяет, что публичные endpoint'ы все еще отвечают.",
     },
     proofs: [
       {
@@ -734,8 +734,8 @@ export const repositorySources: RepositorySource[] = [
       ru: "README как публичный контракт",
     },
     body: {
-      en: "The root README explains the agency model, the delivery cadence, the canonical organization deployment, and the local verification commands that keep the repo honest.",
-      ru: "Корневой README объясняет модель агентства, cadence поставки, канонический деплой организации и локальные команды верификации, которые удерживают репозиторий в честном состоянии.",
+      en: "The root README states the model, the loop, the canonical deployment, and the local verification commands.",
+      ru: "Корневой README фиксирует модель, цикл, канонический деплой и локальные команды верификации.",
     },
     filePath: "README.md",
     repoHref: repoFile("README.md"),
@@ -760,8 +760,8 @@ export const repositorySources: RepositorySource[] = [
       ru: "Документ о начинании",
     },
     body: {
-      en: "The endeavor brief states why the repository is public and why the site exists as a versioned delivery surface for the agency itself.",
-      ru: "Документ о начинании фиксирует, почему репозиторий публичный и почему сам сайт существует как версионируемая поверхность поставки для агентства.",
+      en: "This brief states why the repo is public and why the site exists as a versioned delivery surface for the agency.",
+      ru: "Этот brief фиксирует, почему репозиторий публичный и почему сайт существует как версионируемая поверхность поставки для агентства.",
     },
     filePath: "docs/endeavor.md",
     repoHref: repoFile("docs/endeavor.md"),
@@ -786,8 +786,8 @@ export const repositorySources: RepositorySource[] = [
       ru: "Модель поставки",
     },
     body: {
-      en: "This markdown file captures the step-by-step flow from draft specification through discussion, recorded context, generation, deployment, and repeated review.",
-      ru: "Этот markdown-файл фиксирует пошаговый поток от черновой спецификации через обсуждение, записанный контекст, генерацию, деплой и повторяющееся ревью.",
+      en: "This file captures the flow from draft spec through discussion, recorded context, generation, deployment, and review.",
+      ru: "Этот файл фиксирует поток от черновика спецификации через обсуждение, записанный контекст, генерацию, деплой и ревью.",
     },
     filePath: "docs/delivery-model.md",
     repoHref: repoFile("docs/delivery-model.md"),
@@ -812,8 +812,8 @@ export const repositorySources: RepositorySource[] = [
       ru: "Логика спецификации",
     },
     body: {
-      en: "The specification brief explains why the real spec is assembled from calls, chat, demo state, and deployment traces instead of being treated as a one-time intake form.",
-      ru: "Документ о спецификации объясняет, почему реальная спецификация собирается из звонков, чатов, состояния демо и deployment-трейсов, а не рассматривается как одноразовая intake-форма.",
+      en: "The spec brief explains why the real spec is assembled from calls, chat, demo state, and deploy traces instead of a one-time intake form.",
+      ru: "Документ о спецификации объясняет, почему реальная спецификация собирается из звонков, чатов, состояния демо и deploy-трейсов, а не из одноразовой intake-формы.",
     },
     filePath: "docs/specification.md",
     repoHref: repoFile("docs/specification.md"),
@@ -838,8 +838,8 @@ export const repositorySources: RepositorySource[] = [
       ru: "Покрытие use case'ов",
     },
     body: {
-      en: "The use-case document shows that the same operating cadence applies to internal systems, automations, websites, application surfaces, and high-complexity technical products.",
-      ru: "Документ с use case'ами показывает, что один и тот же рабочий cadence применим к внутренним системам, автоматизациям, сайтам, прикладным поверхностям и техническим продуктам высокой сложности.",
+      en: "The use-case document shows the same cadence across internal systems, automations, sites, apps, and high-complexity products.",
+      ru: "Документ с use case'ами показывает один и тот же cadence для внутренних систем, автоматизаций, сайтов, приложений и сложных продуктов.",
     },
     filePath: "docs/use-cases.md",
     repoHref: repoFile("docs/use-cases.md"),
@@ -860,12 +860,38 @@ export const repositorySources: RepositorySource[] = [
   },
   {
     title: {
+      en: "Sample scenarios",
+      ru: "Примерные сценарии",
+    },
+    body: {
+      en: "The samples brief compresses the method into short rows: intake, recorded context, shipped output, and public proof.",
+      ru: "Документ с примерами сжимает метод в короткие строки: вход, записанный контекст, поставляемый выход и публичное доказательство.",
+    },
+    filePath: "docs/samples.md",
+    repoHref: repoFile("docs/samples.md"),
+    proofs: [
+      {
+        en: "site refresh sample",
+        ru: "пример обновления сайта",
+      },
+      {
+        en: "internal tool sample",
+        ru: "пример внутреннего инструмента",
+      },
+      {
+        en: "automation repair sample",
+        ru: "пример починки автоматизации",
+      },
+    ],
+  },
+  {
+    title: {
       en: "Verification brief",
       ru: "Документ о верификации",
     },
     body: {
-      en: "Verification is documented in markdown and implemented in workflows. The repo states exactly what is linted, tested, built, staged, and monitored after publication.",
-      ru: "Верификация задокументирована в markdown и реализована в workflow. Репозиторий прямо описывает, что именно lint'ится, тестируется, собирается, staging'уется и мониторится после публикации.",
+      en: "Verification is documented in markdown and implemented in workflows. The repo states what is linted, tested, built, staged, and monitored.",
+      ru: "Верификация задокументирована в markdown и реализована в workflow. Репозиторий прямо описывает, что lint'ится, тестируется, собирается, staging'уется и мониторится.",
     },
     filePath: "docs/verification.md",
     repoHref: repoFile("docs/verification.md"),
@@ -890,8 +916,8 @@ export const repositorySources: RepositorySource[] = [
       ru: "Сценарный/manual-артефакт",
     },
     body: {
-      en: "The published Fountain markdown script demonstrates how the agency workflow looks in staged scenes that include Zoom, ChatGPT, VS Code, and iterative client review.",
-      ru: "Опубликованный Fountain markdown-сценарий показывает, как выглядит рабочий процесс агентства в постановочных сценах с Zoom, ChatGPT, VS Code и итеративным клиентским ревью.",
+      en: "The published Fountain script stages the workflow with Zoom, ChatGPT, VS Code, and iterative client review.",
+      ru: "Опубликованный Fountain-сценарий разыгрывает workflow через Zoom, ChatGPT, VS Code и итеративное клиентское ревью.",
     },
     filePath: "public/agency_advertisement_scenario.fountain.md",
     repoHref: repoFile("public/agency_advertisement_scenario.fountain.md"),
@@ -925,8 +951,8 @@ export const cadence: CadenceStep[] = [
       ru: "Поступает черновая спецификация",
     },
     summary: {
-      en: "The client sends a rough technical spec, backlog, or ambition statement. It is incomplete on purpose: enough to start, not enough to freeze.",
-      ru: "Клиент присылает грубую техническую спецификацию, backlog или формулировку замысла. Она намеренно неполная: ее достаточно, чтобы стартовать, но недостаточно, чтобы зацементировать решение.",
+      en: "The client sends a rough spec, backlog, or goal. It is enough to start and intentionally not enough to freeze.",
+      ru: "Клиент присылает грубое ТЗ, backlog или цель. Этого хватает, чтобы стартовать, и намеренно не хватает, чтобы все заморозить.",
     },
     outputs: [
       {
@@ -946,8 +972,8 @@ export const cadence: CadenceStep[] = [
       ru: "Обсуждение раскрывает реальную спецификацию",
     },
     summary: {
-      en: "Calls, video calls, chats, inline comments, issue threads, and screen shares reveal the actual requirements, constraints, objections, priorities, and operating reality.",
-      ru: "Созвоны, видеозвонки, чаты, inline-комментарии, issue-треды и screen share раскрывают реальные требования, ограничения, возражения, приоритеты и операционную реальность.",
+      en: "Calls, chats, comments, issue threads, and screen shares reveal the real requirements, constraints, objections, and priorities.",
+      ru: "Созвоны, чаты, комментарии, issue-треды и screen share раскрывают реальные требования, ограничения, возражения и приоритеты.",
     },
     outputs: [
       {
@@ -967,8 +993,8 @@ export const cadence: CadenceStep[] = [
       ru: "Записанный контекст наполняет AI-реестр",
     },
     summary: {
-      en: "Meeting recordings, transcripts, chat exports, comments, deployment notes, and the current demo state are turned into a structured context pack for the generation agents.",
-      ru: "Записи встреч, транскрипты, выгрузки чатов, комментарии, заметки о деплое и текущее состояние демо превращаются в структурированный контекст-пак для агентов генерации.",
+      en: "Recordings, transcripts, chat exports, comments, deploy notes, and current demo state become a structured context pack for the agents.",
+      ru: "Записи, транскрипты, выгрузки чатов, комментарии, deploy-заметки и текущее демо складываются в структурированный контекст-пак для агентов.",
     },
     outputs: [
       {
@@ -988,8 +1014,8 @@ export const cadence: CadenceStep[] = [
       ru: "AI-конвейер генерирует и деплоит демо",
     },
     summary: {
-      en: "The pipeline writes code, config, interfaces, tests, pages, and deployment assets, then ships a demo or staging version the client can actually inspect.",
-      ru: "Конвейер пишет код, конфиг, интерфейсы, тесты, страницы и deployment-артефакты, после чего поставляет демо или staging-версию, которую клиент может реально посмотреть.",
+      en: "The pipeline writes code, config, UI, tests, pages, and deploy assets, then ships a demo or staging version the client can inspect.",
+      ru: "Конвейер пишет код, конфиг, UI, тесты, страницы и deploy-артефакты, а затем поставляет демо или staging-версию, которую клиент может проверить.",
     },
     outputs: [
       {
@@ -1009,8 +1035,8 @@ export const cadence: CadenceStep[] = [
       ru: "Фидбек замыкается в следующую итерацию",
     },
     summary: {
-      en: "The client reviews the demo, comments on behavior and fidelity, and the resulting conversation becomes the next context layer. The specification keeps sharpening with every loop.",
-      ru: "Клиент смотрит демо, комментирует поведение и точность, а получившийся разговор становится следующим слоем контекста. Спецификация продолжает заостряться на каждом цикле.",
+      en: "The client reviews the demo, comments on behavior and fidelity, and that discussion becomes the next context layer.",
+      ru: "Клиент смотрит демо, комментирует поведение и точность, и этот разговор становится следующим слоем контекста.",
     },
     outputs: [
       {
