@@ -21,6 +21,21 @@ export const mockSectionHeadingSample = {
   sources: ["docs/samples.md", "src/content/mockSamples.ts"],
 };
 
+export const mockSectionHeadingWithoutSources = {
+  eyebrow: {
+    en: "Compact section",
+    ru: "Компактная секция",
+  },
+  title: {
+    en: "Short copy should still stay precise.",
+    ru: "Короткий текст должен оставаться точным.",
+  },
+  description: {
+    en: "Not every heading needs a source chip row.",
+    ru: "Не каждому заголовку нужна строка с источниками.",
+  },
+};
+
 export const mockRepositorySourceSample: RepositorySource = {
   title: {
     en: "Sample pack",
@@ -49,6 +64,29 @@ export const mockRepositorySourceSample: RepositorySource = {
     {
       en: "sample proof trail",
       ru: "пример proof-цепочки",
+    },
+  ],
+};
+
+export const mockRepositorySourceRepoOnly: RepositorySource = {
+  title: {
+    en: "Repo-only brief",
+    ru: "Только репозиторный brief",
+  },
+  body: {
+    en: "Some cards point only to source files and still carry enough proof to explain the method.",
+    ru: "Некоторые карточки ведут только к исходникам и все равно достаточно объясняют метод через proof.",
+  },
+  filePath: "README.md",
+  repoHref: "https://github.com/realagiorganization/blabla_agency/blob/master/README.md",
+  proofs: [
+    {
+      en: "source path",
+      ru: "путь к исходнику",
+    },
+    {
+      en: "bilingual contract",
+      ru: "двуязычный контракт",
     },
   ],
 };

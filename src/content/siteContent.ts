@@ -1059,8 +1059,8 @@ export const cadenceExplorerFrames: CadenceExplorerFrame[] = [
       ru: "Приемка и грубый scope",
     },
     summary: {
-      en: "The first artifact is deliberately rough. The agency needs enough structure to start the dialogue, not a fake sense of completeness.",
-      ru: "Первый артефакт намеренно остается грубым. Агентству нужна достаточная структура, чтобы начать диалог, а не фальшивое ощущение завершенности.",
+      en: "The first artifact is deliberately rough. The agency needs enough structure to start the dialogue, not fake completeness.",
+      ru: "Первый артефакт намеренно остается грубым. Агентству нужна структура для старта диалога, а не ложная завершенность.",
     },
     contextAdds: [
       {
@@ -1090,8 +1090,8 @@ export const cadenceExplorerFrames: CadenceExplorerFrame[] = [
       ru: "Обсуждение и давление решений",
     },
     summary: {
-      en: "Calls, Zoom sessions, chats, and inline comments expose what the client really means, where they disagree internally, and which edge cases matter enough to shape the build.",
-      ru: "Созвоны, Zoom-сессии, чаты и inline-комментарии показывают, что клиент реально имеет в виду, где у него внутренние расхождения и какие edge case'ы достаточно важны, чтобы влиять на сборку.",
+      en: "Calls, Zoom sessions, chats, and inline comments expose what the client really means and which edge cases shape the build.",
+      ru: "Созвоны, Zoom-сессии, чаты и inline-комментарии показывают, что клиент реально имеет в виду и какие edge case'ы влияют на сборку.",
     },
     contextAdds: [
       {
@@ -1121,8 +1121,8 @@ export const cadenceExplorerFrames: CadenceExplorerFrame[] = [
       ru: "Сборка реестра контекста",
     },
     summary: {
-      en: "The agency folds transcripts, comments, demo evidence, and deployment notes into a structured pack that the generation agents can actually operate on.",
-      ru: "Агентство складывает транскрипты, комментарии, доказательства из демо и deployment-заметки в структурированный пакет, с которым агенты генерации действительно могут работать.",
+      en: "The agency folds transcripts, comments, demo evidence, and deploy notes into a structured pack the agents can operate on.",
+      ru: "Агентство складывает транскрипты, комментарии, доказательства из демо и deploy-заметки в структурированный пакет, с которым агенты могут работать.",
     },
     contextAdds: [
       {
@@ -1152,8 +1152,8 @@ export const cadenceExplorerFrames: CadenceExplorerFrame[] = [
       ru: "Генерация и деплой",
     },
     summary: {
-      en: "Code, content, tests, pages, and automation updates are generated against the context ledger and shipped as a real reviewable version.",
-      ru: "Код, контент, тесты, страницы и обновления автоматизации генерируются по реестру контекста и выкатываются как реальная версия для ревью.",
+      en: "Code, content, tests, pages, and automation updates are generated from the context ledger and shipped as a reviewable version.",
+      ru: "Код, контент, тесты, страницы и обновления автоматизации генерируются из реестра контекста и выкатываются как версия для ревью.",
     },
     contextAdds: [
       {
@@ -1183,8 +1183,8 @@ export const cadenceExplorerFrames: CadenceExplorerFrame[] = [
       ru: "Ревью, дельта, повтор",
     },
     summary: {
-      en: "Once the client reacts to the real build, the next iteration starts from evidence. The repo becomes a running memory rather than a pile of disconnected drafts.",
-      ru: "Когда клиент реагирует на реальную сборку, следующая итерация начинается от фактов. Репозиторий становится бегущей памятью, а не кучей несвязанных черновиков.",
+      en: "Once the client reacts to the real build, the next iteration starts from evidence. The repo becomes running memory.",
+      ru: "Когда клиент реагирует на реальную сборку, следующая итерация начинается от фактов. Репозиторий становится рабочей памятью.",
     },
     contextAdds: [
       {
@@ -1216,12 +1216,12 @@ export const contextSources: ContextSource[] = [
       ru: "Записи созвонов",
     },
     body: {
-      en: "Long-form technical conversations reveal the why behind architectural choices and show where the client is hesitating.",
-      ru: "Длинные технические разговоры раскрывают, почему выбирается та или иная архитектура, и показывают, где клиент сомневается.",
+      en: "Long technical conversations reveal why choices are made and where the client hesitates.",
+      ru: "Длинные технические разговоры показывают, почему выбираются решения и где клиент сомневается.",
     },
     note: {
       en: "Used for decision extraction and tradeoff memory.",
-      ru: "Используются для извлечения решений и памяти о компромиссах.",
+      ru: "Используются для извлечения решений и памяти о trade-off'ах.",
     },
   },
   {
@@ -1230,8 +1230,8 @@ export const contextSources: ContextSource[] = [
       ru: "Чаты и комментарии",
     },
     body: {
-      en: "Async clarifications, scope shifts, bug notes, and edge cases usually appear here before they are formalized anywhere else.",
-      ru: "Асинхронные уточнения, сдвиги scope, заметки о багах и edge case'ы обычно появляются здесь раньше, чем где-либо формализуются.",
+      en: "Async clarifications, scope shifts, bug notes, and edge cases usually appear here before anywhere else.",
+      ru: "Асинхронные уточнения, сдвиги scope, заметки о багах и edge case'ы обычно появляются здесь раньше всего.",
     },
     note: {
       en: "Used for live backlog shaping.",
@@ -1245,7 +1245,7 @@ export const contextSources: ContextSource[] = [
     },
     body: {
       en: "The actual behavior of the current build is part of the context. The AI pipeline does not reason from text alone.",
-      ru: "Фактическое поведение текущей сборки тоже является частью контекста. AI-конвейер не рассуждает только по тексту.",
+      ru: "Фактическое поведение текущей сборки тоже входит в контекст. AI-конвейер не рассуждает только по тексту.",
     },
     note: {
       en: "Used for delta planning against the latest visible version.",
@@ -1258,8 +1258,8 @@ export const contextSources: ContextSource[] = [
       ru: "Deployment- и error-трейсы",
     },
     body: {
-      en: "Logs, failures, infra notes, and environment-specific issues ground the next generation cycle in reality.",
-      ru: "Логи, фейлы, infra-заметки и environment-specific проблемы приземляют следующий цикл генерации в реальность.",
+      en: "Logs, failures, infra notes, and environment issues ground the next generation cycle in reality.",
+      ru: "Логи, сбои, infra-заметки и проблемы окружения приземляют следующий цикл генерации в реальность.",
     },
     note: {
       en: "Used for reliability and recovery work.",
@@ -1272,7 +1272,7 @@ export const contextSources: ContextSource[] = [
       ru: "Нарративы клиентского ревью",
     },
     body: {
-      en: "What the client points to in a review often matters more than the original written spec. That narrative gets recorded too.",
+      en: "What the client points to in review often matters more than the original written spec. That narrative is recorded too.",
       ru: "То, на что клиент указывает на ревью, часто важнее исходной письменной спецификации. Этот нарратив тоже записывается.",
     },
     note: {
@@ -1289,8 +1289,8 @@ export const deliverables: Deliverable[] = [
       ru: "Сайт на GitHub Pages",
     },
     body: {
-      en: "The public React site is the front door for the endeavor. It turns repository evidence into a client-readable explanation of the agency model.",
-      ru: "Публичный React-сайт является фронт-дверью этого начинания. Он превращает доказательства из репозитория в клиентопонятное объяснение модели агентства.",
+      en: "The public React site is the front door. It turns repository evidence into a client-readable explanation of the agency model.",
+      ru: "Публичный React-сайт является фронт-дверью. Он превращает доказательства из репозитория в клиентопонятное объяснение модели агентства.",
     },
     sourcePath: "src/App.tsx + src/content/siteContent.ts",
     links: [
@@ -1317,8 +1317,8 @@ export const deliverables: Deliverable[] = [
       ru: "Поверхность ревью в Storybook",
     },
     body: {
-      en: "Reusable bilingual components stay reviewable outside the full-page composition, which makes the site safer to extend and easier to critique.",
-      ru: "Переиспользуемые двуязычные компоненты остаются пригодными для ревью вне полной композиции страницы, что делает сайт безопаснее для расширения и проще для критики.",
+      en: "Reusable bilingual components stay reviewable outside the full page, which makes the site safer to extend and easier to critique.",
+      ru: "Переиспользуемые двуязычные компоненты остаются пригодными для ревью вне полной страницы, что делает сайт безопаснее для расширения и проще для критики.",
     },
     sourcePath: "src/components/ + .storybook/",
     links: [
@@ -1345,8 +1345,8 @@ export const deliverables: Deliverable[] = [
       ru: "PDF-презентация",
     },
     body: {
-      en: "The Beamer deck packages the agency logic into a formal artifact for presentation, review, and distribution outside the browser.",
-      ru: "Beamer-дек упаковывает логику агентства в формальный артефакт для презентации, ревью и распространения вне браузера.",
+      en: "The Beamer deck packages the agency logic into a formal artifact for presentation, review, and sharing outside the browser.",
+      ru: "Beamer-дек упаковывает логику агентства в формальный артефакт для презентации, ревью и передачи вне браузера.",
     },
     sourcePath: "slides/blabla_agency_presentation.tex",
     links: [
@@ -1373,8 +1373,8 @@ export const deliverables: Deliverable[] = [
       ru: "Рекламный screenplay/manual",
     },
     body: {
-      en: "The Fountain markdown script demonstrates the service as a staged scenario with Zoom, ChatGPT, and VS Code interfaces inside the same delivery cadence.",
-      ru: "Fountain markdown-сценарий показывает сервис как постановочный сценарий с интерфейсами Zoom, ChatGPT и VS Code внутри того же рабочего cadence.",
+      en: "The Fountain script demonstrates the service as a staged scenario with Zoom, ChatGPT, and VS Code inside the same cadence.",
+      ru: "Fountain-сценарий показывает сервис как постановочный сценарий с Zoom, ChatGPT и VS Code внутри того же cadence.",
     },
     sourcePath: "public/agency_advertisement_scenario.fountain.md",
     links: [
@@ -1401,8 +1401,8 @@ export const deliverables: Deliverable[] = [
       ru: "Автоматизированная публикация и мониторинг",
     },
     body: {
-      en: "The repo includes explicit workflows for build, deploy, and live verification, so publication is an audited process rather than a manual side step.",
-      ru: "Репозиторий включает явные workflow для сборки, деплоя и живой верификации, поэтому публикация является проверяемым процессом, а не ручным побочным шагом.",
+      en: "The repo includes explicit workflows for build, deploy, and live verification, so publication stays audited instead of manual.",
+      ru: "Репозиторий включает явные workflow для сборки, деплоя и живой верификации, поэтому публикация остается проверяемой, а не ручной.",
     },
     sourcePath: ".github/workflows/presentation.yml + .github/workflows/verification-monitor.yml",
     links: [
@@ -1427,8 +1427,8 @@ export const deliverables: Deliverable[] = [
 ];
 
 export const footerCopy: Bilingual = {
-  en: "Side-by-side bilingual narrative. Storybook-tested React components. GitHub Pages deploy. PDF and screenplay artifacts. Repository-sourced explanation of the agency cadence.",
-  ru: "Двуязычный нарратив бок о бок. React-компоненты, проверенные в Storybook. Деплой на GitHub Pages. PDF- и screenplay-артефакты. Объяснение агентского cadence, собранное из репозитория.",
+  en: "Side-by-side bilingual narrative. Storybook-tested React components. GitHub Pages deploy. PDF and screenplay artifacts. Repo-sourced explanation of the agency loop.",
+  ru: "Двуязычный нарратив бок о бок. React-компоненты, проверенные в Storybook. Деплой на GitHub Pages. PDF- и screenplay-артефакты. Объяснение агентского цикла, собранное из репозитория.",
 };
 
 export const footerLinks: LinkItem[] = [
@@ -1464,8 +1464,8 @@ export const footerLinks: LinkItem[] = [
 ];
 
 export const recordedContextCallout = {
-  en: "Recorded context is not archival overhead. It is the memory substrate that populates the AI generation context with real decisions, real objections, and the live state of the demo version.",
-  ru: "Записанный контекст не является архивным шумом. Это слой памяти, который наполняет AI-контекст генерации реальными решениями, реальными возражениями и живым состоянием demo-версии.",
+  en: "Recorded context is not archive noise. It is the memory layer that gives the AI pipeline real decisions, real objections, and the live state of the demo.",
+  ru: "Записанный контекст не является архивным шумом. Это слой памяти, который дает AI-конвейеру реальные решения, реальные возражения и живое состояние демо.",
 };
 
 export const contextDiagram = `flowchart LR

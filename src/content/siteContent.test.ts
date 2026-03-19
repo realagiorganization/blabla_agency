@@ -69,7 +69,7 @@ describe("site content", () => {
     expect(cadenceExplorerFrames).toHaveLength(5);
     expect(blueprints).toHaveLength(4);
     expect(endeavorTracks).toHaveLength(4);
-    expect(repositorySources).toHaveLength(7);
+    expect(repositorySources).toHaveLength(8);
     expect(contextSources.length).toBeGreaterThanOrEqual(5);
     expect(deliverables).toHaveLength(5);
     expect(Object.keys(sectionCopy)).toEqual([
@@ -82,5 +82,10 @@ describe("site content", () => {
       "context",
       "deliverables",
     ]);
+  });
+
+  it("keeps sample scenarios visible in repository-backed content", () => {
+    expect(repositorySources.some((source) => source.filePath === "docs/samples.md")).toBe(true);
+    expect(metrics[0]?.value).toBe("07");
   });
 });

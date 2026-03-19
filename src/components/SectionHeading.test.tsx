@@ -1,5 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import { mockSectionHeadingSample } from "../content/mockSamples";
+import {
+  mockSectionHeadingSample,
+  mockSectionHeadingWithoutSources,
+} from "../content/mockSamples";
 import { SectionHeading } from "./SectionHeading";
 
 describe("SectionHeading", () => {
@@ -23,5 +26,17 @@ describe("SectionHeading", () => {
     expect(screen.getByText(mockSectionHeadingSample.description.ru)).toBeInTheDocument();
     expect(screen.getAllByText(/source \/ источник/i).length).toBeGreaterThan(0);
     expect(screen.getByText("docs/samples.md")).toBeInTheDocument();
+  });
+
+  it("skips source chips when no sample sources are provided", () => {
+    render(
+      <SectionHeading
+        eyebrow={mockSectionHeadingWithoutSources.eyebrow}
+        title={mockSectionHeadingWithoutSources.title}
+        description={mockSectionHeadingWithoutSources.description}
+      />,
+    );
+
+    expect(screen.queryByLabelText(/repository source paths/i)).not.toBeInTheDocument();
   });
 });

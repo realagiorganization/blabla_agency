@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { mockRepositorySourceSample } from "../content/mockSamples";
+import {
+  mockRepositorySourceRepoOnly,
+  mockRepositorySourceSample,
+} from "../content/mockSamples";
 import { RepositorySourceCard } from "./RepositorySourceCard";
 
 const meta = {
@@ -15,3 +18,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const ReadmeBrief: Story = {};
+
+export const RepoOnly: Story = {
+  args: {
+    source: mockRepositorySourceRepoOnly,
+  },
+};
