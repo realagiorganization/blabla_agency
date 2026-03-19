@@ -5,6 +5,7 @@ import {
   contextSources,
   deliverables,
   deliverDiagram,
+  endeavorTracks,
   hero,
   metrics,
   recordedContextCallout,
@@ -12,6 +13,7 @@ import {
 import { BilingualPanel } from "./components/BilingualPanel";
 import { CadenceStepCard } from "./components/CadenceStepCard";
 import { ContextSourceCard } from "./components/ContextSourceCard";
+import { EndeavorTrackCard } from "./components/EndeavorTrackCard";
 import { MermaidDiagram } from "./components/MermaidDiagram";
 import { PipelineClipArt } from "./components/PipelineClipArt";
 import { SectionHeading } from "./components/SectionHeading";
@@ -21,6 +23,7 @@ function App() {
     <div className="page-shell">
       <header className="hero">
         <nav className="topbar">
+          <a href="#endeavor">Endeavor</a>
           <a href="#cadence">Cadence</a>
           <a href="#context">Context</a>
           <a href="#deliverables">Deliverables</a>
@@ -71,6 +74,19 @@ function App() {
       </header>
 
       <main>
+        <section className="content-section" id="endeavor">
+          <SectionHeading
+            eyebrow="Endeavor"
+            title="This repository is the public, versioned, and continuously built surface of the agency effort."
+            description="The endeavor is not hidden behind private notes. It is explained in markdown, rendered through reusable React components, reviewed in Storybook, deployed on GitHub Pages, and checked through build plus live monitor workflows."
+          />
+          <div className="grid-two">
+            {endeavorTracks.map((track) => (
+              <EndeavorTrackCard key={track.title.en} track={track} />
+            ))}
+          </div>
+        </section>
+
         <section className="content-section" id="surfaces">
           <SectionHeading
             eyebrow="Service surface"

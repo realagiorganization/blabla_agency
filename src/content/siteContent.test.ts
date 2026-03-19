@@ -3,6 +3,7 @@ import {
   capabilities,
   contextSources,
   deliverables,
+  endeavorTracks,
   hero,
   metrics,
   recordedContextCallout,
@@ -37,6 +38,7 @@ describe("site content", () => {
       hero,
       metrics,
       capabilities,
+      endeavorTracks,
       cadence,
       contextSources,
       deliverables,
@@ -48,6 +50,7 @@ describe("site content", () => {
 
   it("defines the full cadence and context set", () => {
     expect(cadence).toHaveLength(5);
+    expect(endeavorTracks).toHaveLength(4);
     expect(contextSources.length).toBeGreaterThanOrEqual(5);
     expect(deliverables.length).toBeGreaterThanOrEqual(4);
   });

@@ -28,6 +28,10 @@ The AI pipeline does not rely on a static written brief alone. It uses the recor
 
 - `../public/agency_advertisement_scenario.fountain.md`
 
+### Endeavor brief
+
+- `./endeavor.md`
+
 ## Русский
 
 **blabla agency** позиционируется здесь не как студия брошюрных сайтов. Репозиторий описывает агентство, которое может поставлять системы, программы, сайты, приложения, автоматизации и софт любой сложности, работая от живого технического разговора.
@@ -55,3 +59,7 @@ AI-конвейер не опирается только на статическ
 ### Сценарный артефакт
 
 - `../public/agency_advertisement_scenario.fountain.md`
+
+### Документ об этом начинании
+
+- `./endeavor.md`

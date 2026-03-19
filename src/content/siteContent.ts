@@ -13,6 +13,12 @@ export type Capability = {
   body: Bilingual;
 };
 
+export type EndeavorTrack = {
+  title: Bilingual;
+  body: Bilingual;
+  proofs: Bilingual[];
+};
+
 export type CadenceStep = {
   label: string;
   title: Bilingual;
@@ -117,6 +123,105 @@ export const capabilities: Capability[] = [
       en: "Versioned specifications, captured decisions, linked demo context, deployment notes, and AI-ready context packs.",
       ru: "Версионируемые спецификации, зафиксированные решения, связанный контекст демо, заметки по деплою и AI-ready контекст-паки.",
     },
+  },
+];
+
+export const endeavorTracks: EndeavorTrack[] = [
+  {
+    title: {
+      en: "Public narrative repository",
+      ru: "Публичный нарративный репозиторий",
+    },
+    body: {
+      en: "This endeavor is intentionally visible as a public organization repository. The repo stores the evolving explanation of the service, not only the source code that powers it.",
+      ru: "Это начинание намеренно вынесено в публичный репозиторий организации. Репозиторий хранит не только исходный код сервиса, но и развивающееся объяснение того, что именно здесь поставляется.",
+    },
+    proofs: [
+      {
+        en: "canonical organization remote",
+        ru: "канонический remote организации",
+      },
+      {
+        en: "bilingual markdown narrative",
+        ru: "двуязычный markdown-нарратив",
+      },
+      {
+        en: "versioned explanation trail",
+        ru: "версионируемая цепочка объяснений",
+      },
+    ],
+  },
+  {
+    title: {
+      en: "GitHub Pages as the front door",
+      ru: "GitHub Pages как фронт-дверь",
+    },
+    body: {
+      en: "The React site, presentation PDF, and published screenplay are built from this repository and deployed as the client-facing surface of the endeavor.",
+      ru: "React-сайт, PDF-презентация и опубликованный screenplay собираются из этого репозитория и деплоятся как клиентская поверхность этого начинания.",
+    },
+    proofs: [
+      {
+        en: "repo-owned Pages deploy",
+        ru: "деплой Pages из самого репозитория",
+      },
+      {
+        en: "published PDF and markdown artifacts",
+        ru: "опубликованные PDF- и markdown-артефакты",
+      },
+      {
+        en: "continuous update path from commits",
+        ru: "непрерывный путь обновления от коммитов",
+      },
+    ],
+  },
+  {
+    title: {
+      en: "Storybook review surface",
+      ru: "Поверхность ревью через Storybook",
+    },
+    body: {
+      en: "The website is composed from reusable React blocks with isolated stories, so the explanation of the endeavor can evolve without turning the UI into an opaque one-off.",
+      ru: "Сайт собран из переиспользуемых React-блоков с изолированными story, поэтому описание этого начинания может меняться без превращения UI в непрозрачный одноразовый слой.",
+    },
+    proofs: [
+      {
+        en: "component stories for review",
+        ru: "component stories для ревью",
+      },
+      {
+        en: "bilingual UI building blocks",
+        ru: "двуязычные UI-строительные блоки",
+      },
+      {
+        en: "same components used in production Pages",
+        ru: "те же компоненты используются в production Pages",
+      },
+    ],
+  },
+  {
+    title: {
+      en: "Verification-backed publication",
+      ru: "Публикация, подкрепленная верификацией",
+    },
+    body: {
+      en: "This endeavor is described through assets that are continuously checked. Local verification, CI builds, artifact staging, and live endpoint monitoring are part of the product surface.",
+      ru: "Это начинание описывается через артефакты, которые непрерывно проверяются. Локальная верификация, CI-сборки, staging артефактов и мониторинг живых endpoint'ов являются частью продуктовой поверхности.",
+    },
+    proofs: [
+      {
+        en: "local make verify flow",
+        ru: "локальный поток make verify",
+      },
+      {
+        en: "build and deploy workflow",
+        ru: "workflow сборки и деплоя",
+      },
+      {
+        en: "live monitor for site, storybook, PDF, and script",
+        ru: "живой мониторинг сайта, storybook, PDF и сценария",
+      },
+    ],
   },
 ];
 

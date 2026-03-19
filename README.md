@@ -44,6 +44,10 @@ The key point is that recorded context is not treated as meeting residue. Record
 
 - Fountain screenplay/manual: `public/agency_advertisement_scenario.fountain.md`
 
+### Endeavor brief
+
+- Markdown document: `docs/endeavor.md`
+
 ### Local workflow
 
 ```bash
@@ -108,6 +112,10 @@ make monitor
 ### Опубликованный screenplay/manual
 
 - Fountain screenplay/manual: `public/agency_advertisement_scenario.fountain.md`
+
+### Документ об этом начинании
+
+- Markdown-документ: `docs/endeavor.md`
 
 ### Локальный процесс
 

@@ -19,6 +19,9 @@ describe("App", () => {
     render(<App />);
 
     expect(
+      screen.getByText(/this repository is the public, versioned, and continuously built surface/i),
+    ).toBeInTheDocument();
+    expect(
       screen.getByText(/the ai pipeline generates from recorded reality/i),
     ).toBeInTheDocument();
     expect(screen.getByText(/call recordings/i)).toBeInTheDocument();
