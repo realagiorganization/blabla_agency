@@ -2,64 +2,66 @@
 
 ## English
 
-**blabla agency** is not positioned here as a brochure shop. The repository describes an agency that can deliver systems, programs, websites, apps, automations, and software of any complexity by working from a living technical conversation.
+**blabla agency** builds systems, programs, websites, apps, and automations from a living technical conversation.
 
-### Core idea
+### Loop
 
-- the client starts with a draft technical specification
-- the draft is expanded through long discussions on calls, video calls, chat, comments, and demo review
-- the recorded context of those discussions plus the current demo state becomes the AI generation context
-- the pipeline generates and deploys a new demo or staging version
-- client feedback is captured against that real version and folded into the next pass
+1. The client sends a draft spec.
+1. Calls, Zoom sessions, chat, comments, and demo review sharpen it.
+1. Recordings, notes, and current demo state become AI context.
+1. The pipeline ships a new demo or staging pass.
+1. Feedback starts the next round.
 
-### What the repo publishes
+### Public surface
 
-- a React GitHub Pages site for the agency narrative
-- a Storybook build for reusable component review
-- a bilingual Beamer presentation
-- a Fountain-style markdown screenplay/manual that stages the agency workflow through Zoom, ChatGPT, and VS Code
-- repository docs explaining cadence, specification logic, and verification
+- React site on GitHub Pages
+- Storybook for component review
+- bilingual Beamer PDF
+- Fountain screenplay/manual with Zoom, ChatGPT, and VS Code scenes
+- short docs for cadence, spec logic, samples, and verification
 
 ### Why recorded context matters
 
-The AI pipeline does not rely on a static written brief alone. It uses the recorded memory of the project: calls, transcripts, chat threads, issue comments, deployment notes, and the visible state of the current demo.
+The AI pipeline does not work from the draft alone. It works from the recorded project memory: calls, transcripts, chats, comments, deploy traces, and the latest demo state.
 
-### Script asset
+### Key files
 
 - `../public/agency_advertisement_scenario.fountain.md`
-
-### Endeavor brief
-
+- `./delivery-model.md`
+- `./specification.md`
+- `./samples.md`
+- `./verification.md`
 - `./endeavor.md`
 
 ## Русский
 
-**blabla agency** позиционируется здесь не как студия брошюрных сайтов. Репозиторий описывает агентство, которое может поставлять системы, программы, сайты, приложения, автоматизации и софт любой сложности, работая от живого технического разговора.
+**blabla agency** делает системы, программы, сайты, приложения и автоматизацию из живого технического разговора.
 
-### Базовая идея
+### Цикл
 
-- клиент начинает с черновой технической спецификации
-- черновик раскрывается через длинные обсуждения в звонках, видеозвонках, чатах, комментариях и ревью демо
-- записанный контекст этих обсуждений вместе с текущим состоянием демо становится AI-контекстом генерации
-- конвейер генерирует и деплоит новую demo- или staging-версию
-- клиентский фидбек собирается уже по реальной версии и замыкается в следующий проход
+1. Клиент присылает черновик ТЗ.
+1. Звонки, Zoom-сессии, чат, комментарии и ревью демо уточняют его.
+1. Записи, заметки и текущее состояние демо становятся AI-контекстом.
+1. Конвейер выпускает новое демо или staging-проход.
+1. Фидбек запускает следующий цикл.
 
-### Что публикует репозиторий
+### Публичная поверхность
 
-- React-сайт на GitHub Pages для нарратива агентства
-- Storybook-сборку для ревью переиспользуемых компонентов
-- двуязычную Beamer-презентацию
-- Fountain-style markdown screenplay/manual, который разыгрывает workflow агентства через Zoom, ChatGPT и VS Code
-- документацию репозитория, объясняющую cadence, логику спецификации и верификацию
+- React-сайт на GitHub Pages
+- Storybook для ревью компонентов
+- двуязычный Beamer PDF
+- Fountain screenplay/manual со сценами Zoom, ChatGPT и VS Code
+- короткие docs про cadence, логику спецификации, примеры и верификацию
 
 ### Почему записанный контекст важен
 
-AI-конвейер не опирается только на статический письменный бриф. Он использует записанную память проекта: звонки, транскрипты, чат-треды, комментарии в issues, заметки о деплое и видимое состояние текущего демо.
+AI-конвейер работает не только от черновика. Он использует записанную память проекта: звонки, транскрипты, чаты, комментарии, деплой-трейсы и последнее состояние демо.
 
-### Сценарный артефакт
+### Основные файлы
 
 - `../public/agency_advertisement_scenario.fountain.md`
-
-### Документ об этом начинании
-
+- `./delivery-model.md`
+- `./specification.md`
+- `./samples.md`
+- `./verification.md`
 - `./endeavor.md`

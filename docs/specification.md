@@ -2,11 +2,11 @@
 
 ## English
 
-### The specification is a moving target on purpose
+### Rule
 
-The client draft starts the project, but it does not finish the specification. The real specification is assembled from discussion plus implementation evidence.
+The draft starts the project. The real spec is built from discussion and implementation evidence.
 
-### What populates the AI context
+### What feeds the AI context
 
 - draft technical specification
 - call and video call recordings
@@ -15,7 +15,7 @@ The client draft starts the project, but it does not finish the specification. T
 - current demo or staging state
 - deployment traces, failures, and environment notes
 
-### What the AI agents need from that context
+### What agents read from it
 
 - current scope boundaries
 - unresolved questions
@@ -26,13 +26,13 @@ The client draft starts the project, but it does not finish the specification. T
 
 ### Result
 
-The repository becomes a context vessel. It stores not only the latest code and docs, but also the structured memory that makes the next generation pass sharper.
+The repo becomes a context vessel. It stores the memory that makes the next generation pass sharper.
 
 ## Русский
 
-### Спецификация намеренно остается движущейся целью
+### Правило
 
-Черновик клиента запускает проект, но не завершает спецификацию. Реальная спецификация собирается из обсуждения и доказательств реализации.
+Черновик запускает проект. Реальная спецификация собирается из обсуждения и доказательств реализации.
 
 ### Что наполняет AI-контекст
 
@@ -43,7 +43,7 @@ The repository becomes a context vessel. It stores not only the latest code and 
 - текущее состояние демо или staging
 - deployment-трейсы, сбои и environment-заметки
 
-### Что AI-агентам нужно из этого контекста
+### Что из этого читают AI-агенты
 
 - текущие границы scope
 - незакрытые вопросы
@@ -54,4 +54,4 @@ The repository becomes a context vessel. It stores not only the latest code and 
 
 ### Результат
 
-Репозиторий становится сосудом контекста. Он хранит не только актуальный код и документацию, но и структурированную память, которая делает следующий проход генерации точнее.
+Репозиторий становится сосудом контекста. Он хранит память, которая делает следующий проход генерации точнее.

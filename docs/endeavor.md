@@ -4,42 +4,42 @@
 
 ### What this endeavor is
 
-This repository is the public, versioned delivery surface for the agency effort itself. It does not only contain source code. It explains how the agency operates, how it turns moving discussion into deployed software, and how that explanation is kept visible and reviewable.
+This repo is the public delivery surface for the agency itself. It explains the method and publishes the proof.
 
 ### Why the repository is public
 
-The canonical remote is an organization repository because the endeavor is meant to be inspectable. The website, Storybook, PDF, screenplay, and markdown docs are all easier to trust when the delivery surface is visible and versioned.
+The canonical remote is an organization repo because the work should stay inspectable. Site, Storybook, PDF, screenplay, and docs are part of the product.
 
 ### What the website is doing
 
-The React GitHub Pages site is the front door for the endeavor. It turns the repo narrative into a client-readable surface, while Storybook keeps the reusable UI blocks reviewable outside the full page composition.
+The React Pages site is the front door. Storybook keeps the same UI blocks reviewable outside the page.
 
 ### What the markdown is doing
 
-The markdown docs describe the operating logic in plain text: cadence, specification evolution, verification, use cases, and now this endeavor itself. They are meant to preserve the reasoning around the service, not just the rendered output.
+The markdown set keeps the method plain: cadence, spec logic, samples, verification, and this endeavor brief.
 
 ### What verification means here
 
-This endeavor is not described by static promises alone. The repo ships a tested React site, Storybook build, PDF artifact, screenplay asset, and monitor workflow. The publication surface is continuously rebuilt and checked.
+This repo does not stop at claims. It rebuilds and checks the site, Storybook, PDF, screenplay, and monitor flow.
 
 ## Русский
 
 ### Что это за начинание
 
-Этот репозиторий является публичной, версионируемой поверхностью поставки для самого агентского начинания. Он содержит не только исходный код. Он объясняет, как работает агентство, как оно превращает развивающееся обсуждение в задеплоенный софт и как это объяснение поддерживается видимым и пригодным для ревью.
+Этот репозиторий является публичной поверхностью поставки для самого агентства. Он объясняет метод и публикует доказательство работы.
 
 ### Почему репозиторий публичный
 
-Канонический remote является репозиторием организации, потому что это начинание задумано как inspectable. Сайт, Storybook, PDF, screenplay и markdown-документы вызывают больше доверия, когда поверхность поставки видима и версионируема.
+Канонический remote находится в организации, потому что работу нужно делать inspectable. Сайт, Storybook, PDF, screenplay и docs являются частью продукта.
 
 ### Что делает сайт
 
-React-сайт на GitHub Pages работает как фронт-дверь этого начинания. Он превращает нарратив репозитория в клиентопонятную поверхность, а Storybook сохраняет переиспользуемые UI-блоки пригодными для ревью вне полной композиции страницы.
+React-сайт на Pages работает как фронт-дверь. Storybook держит те же UI-блоки пригодными для ревью вне полной страницы.
 
 ### Что делает markdown
 
-Markdown-документы объясняют рабочую логику простым текстом: cadence, эволюцию спецификации, верификацию, use case'ы и теперь само это начинание. Они нужны для сохранения логики сервиса, а не только финального отрендеренного слоя.
+Markdown-набор хранит метод простым текстом: cadence, логику спецификации, примеры, верификацию и этот brief.
 
 ### Что здесь означает верификация
 
-Это начинание описывается не только статическими обещаниями. Репозиторий поставляет протестированный React-сайт, Storybook-сборку, PDF-артефакт, screenplay-артефакт и monitor-workflow. Поверхность публикации непрерывно пересобирается и проверяется.
+Репозиторий не ограничивается обещаниями. Он пересобирает и проверяет сайт, Storybook, PDF, screenplay и monitor-поток.

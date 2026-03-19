@@ -2,7 +2,7 @@
 
 ## English
 
-### What is verified now
+### Checks
 
 - Markdown, YAML, shell, and content policy checks
 - React type safety
@@ -25,7 +25,7 @@ make verify
 make monitor
 ```
 
-`make verify` is the full local proof: it rebuilds the PDF, runs tests, stages the React site and Storybook, checks the generated output, and writes the artifact manifest.
+`make verify` is the full local proof. It rebuilds the PDF, runs tests, stages the site and Storybook, checks outputs, and writes the artifact manifest.
 
 ### GitHub Actions
 
@@ -34,7 +34,7 @@ make monitor
 
 ## Русский
 
-### Что теперь проверяется
+### Проверки
 
 - проверки Markdown, YAML, shell и content policy
 - type safety React
@@ -57,7 +57,7 @@ make verify
 make monitor
 ```
 
-`make verify` является полным локальным доказательством: он пересобирает PDF, запускает тесты, подготавливает React-сайт и Storybook, проверяет сгенерированный выход и пишет манифест артефактов.
+`make verify` является полным локальным доказательством. Он пересобирает PDF, запускает тесты, подготавливает сайт и Storybook, проверяет выход и пишет манифест артефактов.
 
 ### GitHub Actions
 
