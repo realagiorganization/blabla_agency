@@ -78,6 +78,7 @@ button {
 .resource-link:hover,
 .primary-button:hover,
 .secondary-button:hover,
+.blueprint-step:hover,
 .explorer-step:hover,
 .explorer-toggle:hover {
   transform: translateY(-2px);
@@ -171,7 +172,10 @@ button {
 .deliverable-card,
 .diagram-card,
 .metric-card,
-.explorer-card {
+.explorer-card,
+.blueprint-board,
+.blueprint-summary,
+.blueprint-column {
   border: 1px solid rgba(16, 33, 44, 0.08);
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.78);
@@ -356,7 +360,8 @@ button {
 .step-card h3,
 .context-card h3,
 .diagram-card h3,
-.repo-card h3 {
+.repo-card h3,
+.blueprint-board h3 {
   margin: 0;
   font-size: 1.25rem;
 }
@@ -478,6 +483,70 @@ button {
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(16, 33, 44, 0.08);
+}
+
+.blueprint-board {
+  padding: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(241, 244, 240, 0.92)),
+    radial-gradient(circle at top right, rgba(102, 168, 177, 0.12), transparent 28%);
+}
+
+.blueprint-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.blueprint-toolbar-copy {
+  max-width: 38ch;
+  margin: 0;
+  color: #36454e;
+}
+
+.blueprint-selector {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.blueprint-step {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  border: 1px solid rgba(16, 33, 44, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.blueprint-step.is-active {
+  border-color: rgba(102, 168, 177, 0.54);
+  background: rgba(236, 247, 246, 0.98);
+}
+
+.blueprint-stage {
+  display: grid;
+  gap: 16px;
+}
+
+.blueprint-summary,
+.blueprint-column {
+  padding: 18px;
+}
+
+.blueprint-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .explorer-column-label,
@@ -645,11 +714,13 @@ button {
   .deliverable-grid,
   .metric-strip,
   .explorer-stage,
-  .section-heading-grid {
+  .section-heading-grid,
+  .blueprint-columns {
     grid-template-columns: 1fr 1fr;
   }
 
   .step-grid,
+  .blueprint-selector,
   .explorer-selector {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -682,12 +753,15 @@ button {
   .step-grid,
   .section-heading-grid,
   .explorer-stage,
+  .blueprint-columns,
+  .blueprint-selector,
   .explorer-selector {
     grid-template-columns: 1fr;
   }
 
   .repo-card-header,
   .explorer-toolbar,
+  .blueprint-toolbar,
   .footer {
     flex-direction: column;
   }

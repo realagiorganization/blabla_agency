@@ -1,4 +1,5 @@
 import {
+  blueprints,
   cadence,
   cadenceExplorerFrames,
   capabilities,
@@ -18,6 +19,7 @@ import {
   sectionCopy,
 } from "./content/siteContent";
 import { BilingualPanel } from "./components/BilingualPanel";
+import { BlueprintBoard } from "./components/BlueprintBoard";
 import { CadenceExplorer } from "./components/CadenceExplorer";
 import { CadenceStepCard } from "./components/CadenceStepCard";
 import { ContextSourceCard } from "./components/ContextSourceCard";
@@ -130,6 +132,16 @@ function App() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="content-section" id="blueprints">
+          <SectionHeading
+            eyebrow={sectionCopy.blueprints.eyebrow}
+            title={sectionCopy.blueprints.title}
+            description={sectionCopy.blueprints.description}
+            sources={sectionCopy.blueprints.sources}
+          />
+          <BlueprintBoard blueprints={blueprints} />
         </section>
 
         <section className="content-section" id="cadence">

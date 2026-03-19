@@ -30,6 +30,16 @@ export type Capability = {
   body: Bilingual;
 };
 
+export type Blueprint = {
+  slug: string;
+  label: string;
+  title: Bilingual;
+  scope: Bilingual;
+  inputs: Bilingual[];
+  outputs: Bilingual[];
+  proofs: Bilingual[];
+};
+
 export type EndeavorTrack = {
   title: Bilingual;
   body: Bilingual;
@@ -108,6 +118,13 @@ export const navigationLinks: LinkItem[] = [
     label: {
       en: "Service surface",
       ru: "Поверхность сервиса",
+    },
+  },
+  {
+    href: "#blueprints",
+    label: {
+      en: "Blueprints",
+      ru: "Сценарии поставки",
     },
   },
   {
@@ -236,6 +253,21 @@ export const sectionCopy = {
       ru: "Один и тот же cadence может двигаться от маркетинговых сайтов до внутренних операционных систем, потому что спецификация рассматривается как живой разговор, а не как застывшая intake-форма.",
     },
     sources: ["docs/use-cases.md", "docs/specification.md"],
+  },
+  blueprints: {
+    eyebrow: {
+      en: "Delivery blueprints",
+      ru: "Сценарии поставки",
+    },
+    title: {
+      en: "Different project shapes still run through the same agency loop.",
+      ru: "Разные формы проектов все равно проходят через один и тот же агентский цикл.",
+    },
+    description: {
+      en: "These blueprints are derived from the repository use cases. Switch between them to see what enters the context ledger, what the agency ships, and what public proof surfaces stay available to the client.",
+      ru: "Эти сценарии выведены из use case'ов репозитория. Переключайтесь между ними, чтобы увидеть, что входит в реестр контекста, что агентство поставляет и какие публичные proof-поверхности остаются доступными клиенту.",
+    },
+    sources: ["docs/use-cases.md", "docs/specification.md", "docs/verification.md"],
   },
   cadence: {
     eyebrow: {
@@ -374,6 +406,225 @@ export const capabilities: Capability[] = [
       en: "Versioned specifications, recorded decisions, linked demo context, deployment notes, verification workflows, and AI-ready context packs.",
       ru: "Версионируемые спецификации, записанные решения, связанный контекст демо, заметки по деплою, workflow верификации и AI-ready контекст-паки.",
     },
+  },
+];
+
+export const blueprints: Blueprint[] = [
+  {
+    slug: "internal-system",
+    label: "01",
+    title: {
+      en: "Internal operating system",
+      ru: "Внутренняя операционная система",
+    },
+    scope: {
+      en: "A client needs an internal tool that coordinates operators, queues, files, approvals, and escalations. The real workflow only becomes visible when the team walks through the work on calls and screen shares.",
+      ru: "Клиенту нужен внутренний инструмент, который координирует операторов, очереди, файлы, согласования и эскалации. Реальный workflow становится видимым только когда команда проходит работу на созвонах и через screen share.",
+    },
+    inputs: [
+      {
+        en: "operator walkthrough calls",
+        ru: "созвоны с разбором работы операторов",
+      },
+      {
+        en: "approval edge cases from chat",
+        ru: "краевые кейсы согласований из чатов",
+      },
+      {
+        en: "current queue and file handling pain",
+        ru: "текущая боль с очередями и файлами",
+      },
+    ],
+    outputs: [
+      {
+        en: "ops dashboard or internal portal",
+        ru: "операционный дашборд или внутренний портал",
+      },
+      {
+        en: "role-aware workflow automation",
+        ru: "автоматизация workflow с учетом ролей",
+      },
+      {
+        en: "versioned scope and acceptance notes",
+        ru: "версионируемый scope и acceptance-заметки",
+      },
+    ],
+    proofs: [
+      {
+        en: "repo diffs plus deploy notes",
+        ru: "diff'ы репозитория и заметки по деплою",
+      },
+      {
+        en: "Storybook-reviewed admin components",
+        ru: "админ-компоненты, проверенные в Storybook",
+      },
+      {
+        en: "monitorable demo environment",
+        ru: "мониторируемое demo-окружение",
+      },
+    ],
+  },
+  {
+    slug: "automation-program",
+    label: "02",
+    title: {
+      en: "Program and automation stack",
+      ru: "Программа и стек автоматизации",
+    },
+    scope: {
+      en: "A service team needs scripts, parsers, data movers, agent loops, and long-running automation. The nuance lives in clarifications, failures, and post-demo notes more than in the opening brief.",
+      ru: "Команде сервиса нужны скрипты, парсеры, переносчики данных, агентные циклы и долгоживущая автоматизация. Нюансы живут в уточнениях, фейлах и заметках после демо сильнее, чем в стартовом брифе.",
+    },
+    inputs: [
+      {
+        en: "failure traces and run logs",
+        ru: "трейсы падений и логи запусков",
+      },
+      {
+        en: "chat clarifications around edge cases",
+        ru: "чатовые уточнения по edge case'ам",
+      },
+      {
+        en: "demo recordings of manual work",
+        ru: "записи демо ручной работы",
+      },
+    ],
+    outputs: [
+      {
+        en: "CLI and service automation stack",
+        ru: "CLI и стек сервисной автоматизации",
+      },
+      {
+        en: "repeatable operator runbooks",
+        ru: "повторяемые runbook'и для операторов",
+      },
+      {
+        en: "tracked generation-ready context packs",
+        ru: "отслеживаемые контекст-паки для генерации",
+      },
+    ],
+    proofs: [
+      {
+        en: "artifact manifests and CI logs",
+        ru: "манифесты артефактов и CI-логи",
+      },
+      {
+        en: "versioned automation behavior",
+        ru: "версионируемое поведение автоматизации",
+      },
+      {
+        en: "public explanation of the loop",
+        ru: "публичное объяснение рабочего цикла",
+      },
+    ],
+  },
+  {
+    slug: "website-and-app",
+    label: "03",
+    title: {
+      en: "Website plus application surface",
+      ru: "Сайт плюс прикладная поверхность",
+    },
+    scope: {
+      en: "A company needs a public website, a client-facing app layer, and supporting dashboards. Narrative, UI behavior, and release scope sharpen together through recorded review sessions.",
+      ru: "Компании нужны публичный сайт, прикладной слой для клиента и поддерживающие дашборды. Нарратив, поведение UI и release-scope уточняются вместе через записанные review-сессии.",
+    },
+    inputs: [
+      {
+        en: "review call recordings",
+        ru: "записи review-созвонов",
+      },
+      {
+        en: "comments on copy and interaction",
+        ru: "комментарии по копирайту и взаимодействию",
+      },
+      {
+        en: "demo deltas versus approved narrative",
+        ru: "дельты демо относительно утвержденного нарратива",
+      },
+    ],
+    outputs: [
+      {
+        en: "public site and client-facing app shell",
+        ru: "публичный сайт и каркас клиентского приложения",
+      },
+      {
+        en: "reusable React component system",
+        ru: "переиспользуемая React-компонентная система",
+      },
+      {
+        en: "presentation and screenplay layers",
+        ru: "слои презентации и сценария",
+      },
+    ],
+    proofs: [
+      {
+        en: "live Pages site and Storybook",
+        ru: "живой Pages-сайт и Storybook",
+      },
+      {
+        en: "PDF presentation artifact",
+        ru: "PDF-артефакт презентации",
+      },
+      {
+        en: "client-readable bilingual docs",
+        ru: "клиентопонятные двуязычные docs",
+      },
+    ],
+  },
+  {
+    slug: "high-complexity-platform",
+    label: "04",
+    title: {
+      en: "High-complexity technical platform",
+      ru: "Техническая платформа высокой сложности",
+    },
+    scope: {
+      en: "A platform with integrations, environments, and reliability constraints cannot be frozen by a single spec pass. The next implementation round has to inherit both the latest discussion and the latest demo reality.",
+      ru: "Платформу с интеграциями, окружениями и ограничениями надежности нельзя заморозить одним проходом по спецификации. Следующий раунд реализации должен наследовать и последнее обсуждение, и последнюю реальность демо.",
+    },
+    inputs: [
+      {
+        en: "environment notes and deployment traces",
+        ru: "environment-заметки и deployment-трейсы",
+      },
+      {
+        en: "integration concerns from deep calls",
+        ru: "интеграционные concerns из глубоких созвонов",
+      },
+      {
+        en: "staging behavior under real load",
+        ru: "поведение staging под реальной нагрузкой",
+      },
+    ],
+    outputs: [
+      {
+        en: "iterated platform specification",
+        ru: "итерированная спецификация платформы",
+      },
+      {
+        en: "deployable platform slices",
+        ru: "деплоимые срезы платформы",
+      },
+      {
+        en: "recovery and reliability work queue",
+        ru: "очередь работ по recovery и reliability",
+      },
+    ],
+    proofs: [
+      {
+        en: "live verification workflow",
+        ru: "workflow живой верификации",
+      },
+      {
+        en: "current demo and artifact trail",
+        ru: "текущая демо-версия и цепочка артефактов",
+      },
+      {
+        en: "recorded decision memory in repo",
+        ru: "записанная память решений в репозитории",
+      },
+    ],
   },
 ];
 

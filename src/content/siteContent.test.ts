@@ -1,4 +1,5 @@
 import {
+  blueprints,
   cadence,
   cadenceExplorerFrames,
   capabilities,
@@ -48,6 +49,7 @@ describe("site content", () => {
       sectionCopy,
       metrics,
       capabilities,
+      blueprints,
       endeavorTracks,
       repositorySources,
       cadence,
@@ -65,6 +67,7 @@ describe("site content", () => {
   it("defines the full cadence, repo sources, and public outputs", () => {
     expect(cadence).toHaveLength(5);
     expect(cadenceExplorerFrames).toHaveLength(5);
+    expect(blueprints).toHaveLength(4);
     expect(endeavorTracks).toHaveLength(4);
     expect(repositorySources).toHaveLength(7);
     expect(contextSources.length).toBeGreaterThanOrEqual(5);
@@ -73,6 +76,7 @@ describe("site content", () => {
       "endeavor",
       "sources",
       "surfaces",
+      "blueprints",
       "cadence",
       "diagrams",
       "context",

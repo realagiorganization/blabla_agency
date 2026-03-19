@@ -16,6 +16,9 @@ describe("App", () => {
     expect(
       screen.getByText(/the site explains itself from repository evidence instead of generic claims/i),
     ).toBeInTheDocument();
+    expect(
+      screen.getByText(/different project shapes still run through the same agency loop/i),
+    ).toBeInTheDocument();
     expect(screen.getAllByText("README.md").length).toBeGreaterThan(0);
     expect(screen.getByText("Источники репозитория")).toBeInTheDocument();
   });
