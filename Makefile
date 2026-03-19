@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: deps venv node content-policy lint pdf site artifacts verify ci monitor clean
+.PHONY: deps venv node content-policy lint pdf site artifacts e2e verify ci monitor clean
 
 deps: venv node
 
@@ -26,6 +26,9 @@ site:
 artifacts:
 	./scripts/write_artifact_manifest.sh
 
+e2e:
+	./scripts/run_playwright.sh
+
 verify:
 	./scripts/verify_build.sh
 
@@ -35,4 +38,4 @@ monitor:
 	./scripts/monitor_verification.sh
 
 clean:
-	rm -rf artifacts build dist site storybook-static
+	rm -rf artifacts build dist playwright-report preview site storybook-static test-results

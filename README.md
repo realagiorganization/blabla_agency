@@ -56,13 +56,15 @@ The agency takes a draft spec, expands it through recorded discussion, feeds tha
 ```bash
 make lint
 npm run test:run
+make e2e
 make verify
 make monitor
 ```
 
 - `make lint`: lint plus typecheck
 - `npm run test:run`: Vitest suite
-- `make verify`: PDF, site, Storybook, staging, manifest
+- `make e2e`: Playwright smoke checks for the staged site and Storybook
+- `make verify`: PDF, site, Storybook, Playwright, staging, manifest
 - `make monitor`: latest workflow plus live endpoints
 
 ## Русский
@@ -121,11 +123,13 @@ make monitor
 ```bash
 make lint
 npm run test:run
+make e2e
 make verify
 make monitor
 ```
 
 - `make lint`: lint плюс typecheck
 - `npm run test:run`: набор Vitest
-- `make verify`: PDF, сайт, Storybook, staging, манифест
+- `make e2e`: Playwright smoke-проверки staged-сайта и Storybook
+- `make verify`: PDF, сайт, Storybook, Playwright, staging, манифест
 - `make monitor`: последний workflow и живые endpoint'ы

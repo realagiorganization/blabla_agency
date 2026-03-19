@@ -18,5 +18,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const WithoutSources: Story = {
-  args: mockSectionHeadingWithoutSources,
+  args: {
+    ...mockSectionHeadingWithoutSources,
+    sources: undefined,
+  },
 };

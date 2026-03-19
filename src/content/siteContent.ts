@@ -890,8 +890,8 @@ export const repositorySources: RepositorySource[] = [
       ru: "Документ о верификации",
     },
     body: {
-      en: "Verification is documented in markdown and implemented in workflows. The repo states what is linted, tested, built, staged, and monitored.",
-      ru: "Верификация задокументирована в markdown и реализована в workflow. Репозиторий прямо описывает, что lint'ится, тестируется, собирается, staging'уется и мониторится.",
+      en: "Verification is documented in markdown and implemented in workflows. The repo states what is linted, unit-tested, browser-tested, built, staged, and monitored.",
+      ru: "Верификация задокументирована в markdown и реализована в workflow. Репозиторий прямо описывает, что lint'ится, unit-тестируется, browser-тестируется, собирается, staging'уется и мониторится.",
     },
     filePath: "docs/verification.md",
     repoHref: repoFile("docs/verification.md"),
@@ -905,8 +905,8 @@ export const repositorySources: RepositorySource[] = [
         ru: "покрытие CI-сборкой",
       },
       {
-        en: "live endpoint checks",
-        ru: "проверки живых endpoint'ов",
+        en: "Playwright smoke plus live checks",
+        ru: "Playwright smoke плюс live-проверки",
       },
     ],
   },
@@ -1401,8 +1401,8 @@ export const deliverables: Deliverable[] = [
       ru: "Автоматизированная публикация и мониторинг",
     },
     body: {
-      en: "The repo includes explicit workflows for build, deploy, and live verification, so publication stays audited instead of manual.",
-      ru: "Репозиторий включает явные workflow для сборки, деплоя и живой верификации, поэтому публикация остается проверяемой, а не ручной.",
+      en: "The repo includes explicit workflows for build, deploy, browser verification, and live monitoring, so publication stays audited instead of manual.",
+      ru: "Репозиторий включает явные workflow для сборки, деплоя, browser-верификации и live-мониторинга, поэтому публикация остается проверяемой, а не ручной.",
     },
     sourcePath: ".github/workflows/presentation.yml + .github/workflows/verification-monitor.yml",
     links: [

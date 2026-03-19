@@ -7,9 +7,11 @@
     "build": "vite build",
     "build-storybook": "storybook build",
     "dev": "vite",
+    "playwright:install": "playwright install chromium",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "test": "vitest",
+    "test:e2e": "playwright test",
     "test:run": "vitest run",
     "typecheck": "tsc --noEmit"
   },
@@ -19,6 +21,7 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@storybook/addon-a11y": "^10.2.19",
     "@storybook/addon-docs": "^10.2.19",
     "@storybook/react-vite": "^10.2.19",

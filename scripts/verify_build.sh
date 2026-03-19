@@ -13,4 +13,5 @@ cd "$root"
 npm run test:run
 "$script_dir/stage_site.sh"
 "$script_dir/verify_outputs.sh"
+"$script_dir/run_playwright.sh"
 "$script_dir/write_artifact_manifest.sh"

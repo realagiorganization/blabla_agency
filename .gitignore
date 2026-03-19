@@ -13,6 +13,7 @@
 !requirements-dev.txt
 !package.json
 !package-lock.json
+!playwright.config.ts
 !tsconfig.json
 !vite.config.ts
 !vitest.config.ts
@@ -31,6 +32,8 @@
 !slides/**
 !src/
 !src/**
+!e2e/
+!e2e/**
 !.codex/
 !.codex/skills/
 !.codex/skills/.gitkeep
@@ -47,6 +50,9 @@ site/
 node_modules/
 dist/
 storybook-static/
+preview/
+playwright-report/
+test-results/
 .node_modules_stamp
 coverage/
 __pycache__/
